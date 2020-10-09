@@ -1,0 +1,21 @@
+---
+title: "Nudibranchs"
+description: |
+  A little introduction to one of my favourite seaborne animals :3
+author:
+  - name: Guillaume Gégo
+    url: {}
+date: 10-09-2020
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Distill is a publication format for scientific and technical writing, native to the web.
+
+Learn more about using Distill at <https://rstudio.github.io/distill>.
+

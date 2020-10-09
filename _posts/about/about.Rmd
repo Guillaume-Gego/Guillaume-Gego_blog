@@ -6,6 +6,8 @@ date: "`r Sys.Date()`"
 output: distill::distill_article
 ---
 
+![](images/AstroBio.jpg)
+
 Greetings dear reader, my name is Guillaume Gégo, and this is my blog :3
 
 You're probably have a lot of questions about what I'm doing here, and honestly, I have no idea. But still, since we're both here, tag along my journey to become one of the world's finest Astronaut's! 
@@ -24,6 +26,6 @@ So that's about it for now! I'll update this page once in a while if anything ch
 
 See you around and have fun with this blog!
 
-- Gégo/Guillaume, DEVILLEZ, English Class, 2020-2021
+- Gégo Guillaume, DEVILLEZ, English Class, 2020-2021
 
 [GoFundMe Page](https://www.gofundme.com/f/Help-me-grow-plants-on-Mars-by-funding-my-studies)
