@@ -1,5 +1,20 @@
 [
   {
+    "path": "posts/2020-10-10-the-nudibranchs/",
+    "title": "*The Nudibranchs*",
+    "description": "A short description of the post.",
+    "author": [
+      {
+        "name": "Guillaume Gégo",
+        "url": {}
+      }
+    ],
+    "date": "2020-10-10",
+    "categories": [],
+    "preview": {},
+    "last_modified": "2020-10-10T02:14:34+02:00"
+  },
+  {
     "path": "posts/about/",
     "title": "About Me",
     "description": {},
@@ -9,10 +24,10 @@
         "url": {}
       }
     ],
-    "date": "2020-10-09",
+    "date": "2020-10-10",
     "categories": [],
     "preview": {},
-    "last_modified": "2020-10-09T13:10:32+02:00"
+    "last_modified": "2020-10-10T01:42:26+02:00"
   },
   {
     "path": "posts/2019-10-24-bacteria-antobiotics/",

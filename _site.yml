@@ -3,6 +3,7 @@ title: "Guillaume Gégo's Blog"
 output_dir: "docs"
 navbar:
   right:
+    - image: astronaut_avatar.png
     - text: "Home"
       href: index.html
     - text: "M.E.A.L."
@@ -15,7 +16,8 @@ base_url: http://Guillaume-Gego.github.io/Guillaume-Gego_blog/
 collections:
     posts:
       share: [twitter, linkedin, facebook]
-      #disqus: 
+      disqus:
+        shortname: https-guillaume-gego-github-io-guillaume-gego-blog
 output:
   distill::distill_article:
     css: style.css

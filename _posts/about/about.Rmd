@@ -6,7 +6,7 @@ date: "`r Sys.Date()`"
 output: distill::distill_article
 ---
 
-![](images/AstroBio.jpg)
+![](astronaut_avatar.png)
 
 Greetings dear reader, my name is Guillaume Gégo, and this is my blog :3
 
