@@ -3,6 +3,7 @@ title: "About Me"
 author:
   - name: "Guillaume Gégo" 
 date: "`r Sys.Date()`"
+preview: astronaut_avatar.png
 output: distill::distill_article
 ---
 

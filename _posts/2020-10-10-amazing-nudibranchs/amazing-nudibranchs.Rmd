@@ -21,7 +21,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ## Introduction
-![*This here is Andrew. The lil chap is a colorful deadly Nudibranch from the Gastropoda class with 2 freaky freaky rhinophores that disguises him into a sea rabbit! Isn't he just the cutest? What's a Nudibranch you ask? Well let me break it down for you. It goes a little like this:*](../Images/Nudibranchs1.jpg)
+![*This here is Andrew. The lil chap is a colorful deadly Nudibranch from the Gastropoda class with 2 freaky freaky rhinophores that disguises him into a sea rabbit! Isn't he just the cutest? What's a Nudibranch you ask? Well let me break it down for you. It goes a little like this:*](images/Nudibranchs1.jpg)
 
 Nudibranchs are an order of benthic soft-bodied molluscs whose presence is easily betrayed by their fascinating but threatening color palette and uncanny eerie forms .They are more than **3000 species** of nudibranchs that crawl freely on the substrate of salty water bodies around the globe.
 
@@ -69,14 +69,14 @@ But in this case, since the nudibranch is part of a class called Opisthobranchs 
 
 ### Anatomy
 
-![*Berghia stephanieae*. Notes: oral tentacles (ot), foot tentacles (ft), eye (e), rhinophores (r), and cerata (c). This species has cnidosacs (cn) at the cerata tips. Scale bar is 100μm.](../Images/Anatomy_Nudibranchs.png)
+![*Berghia stephanieae*. Notes: oral tentacles (ot), foot tentacles (ft), eye (e), rhinophores (r), and cerata (c). This species has cnidosacs (cn) at the cerata tips. Scale bar is 100μm.](images/Anatomy_Nudibranchs.png)
 
 ### Defense mechanisms
 As seen on the previous illustration, the cnidosacs and ceratas have replaced the shell as defensive organs through evolutionary processes.
 
-![While some species adapted their skintones to match the substrate or food they usually stay on, some of them decided to go bling bling instead. This is a perfect exemple of marine **aposematism**. It's defined as the principle of advertising to predators that they are poisoneous and therefore not suitable for degustation. Here is an example with this lovely *Berghia coerulescens*.](../Images/aposematism.jpg)
+![While some species adapted their skintones to match the substrate or food they usually stay on, some of them decided to go bling bling instead. This is a perfect exemple of marine **aposematism**. It's defined as the principle of advertising to predators that they are poisoneous and therefore not suitable for degustation. Here is an example with this lovely *Berghia coerulescens*.](images/aposematism.jpg)
 
-![In species that **feed on hydrozoids** (Ph. Cnidaria, mostly corals and jellyfishs) can use the **nematocysts** (// cnidocysts, stinging cells contained in the nemato/cnido-sacs) in their ceratas. The stolen nematocysts are called **kleptocnidae**.](../Images/kleptocnidae.jpg)
+![In species that **feed on hydrozoids** (Ph. Cnidaria, mostly corals and jellyfishs) can use the **nematocysts** (// cnidocysts, stinging cells contained in the nemato/cnido-sacs) in their ceratas. The stolen nematocysts are called **kleptocnidae**.](images/kleptocnidae.jpg)
 
 [^1]
 
@@ -85,11 +85,11 @@ There are other less common defenses such as **acidic mucus**, **distastefulness
 ### Reproduction
 Nudibranchs are **hermaphrodites**, which means they technically could pack it themselves. Except not really, because that would be too easy, innit? In order to mate, the nudibranch **follows the trail** and chemical signals (with the rhinophores) of other Nudibranchs of its species. 
 
-![Since their sexual appendix is located on they right side, two nudibranchs need to position themselves like shown in the illustration above. During that high-five, both individuals are fertilized.](../Images/reproduction.png)
+![Since their sexual appendix is located on they right side, two nudibranchs need to position themselves like shown in the illustration above. During that high-five, both individuals are fertilized.](images/reproduction.png)
 
 The eggs are layed within a **gelatinous spiral** as shown below.  The **eggs contain toxins** from sponges to dissuade predators from having scrambled eggs for breakfast. In most species, the egg will hatch in a swimming **veliger larva** with a coiled shell, but the shell is lost during metamorphosis into the adult form. Young Nudibranchs look exactly like adults, but smaller and with fewer ceratas (for Aeolids). They can live from a few weeks to about a year depending on the species.
 
-![String of eggs layed by *Flabellina goddardi*, a species of fiery-colored sea slug.](../Images/Eggs_Nudibranchs.jpg)
+![String of eggs layed by *Flabellina goddardi*, a species of fiery-colored sea slug.](images/Eggs_Nudibranchs.jpg)
 
 ## Feeding process
 
@@ -114,4 +114,3 @@ For more information, check the species' wikipedia page ([link](https://en.wikip
 [![A really interesting video about nudibranchs](http://img.youtube.com/vi/F7V8DRfZBQI/0.jpg)](http://www.youtube.com/watch?v=F7V8DRfZBQI "True Facts: Freaky Nudibranchs")
 
 [^1]: A similar process can be seen in a cousin group (Sacoglossan), where the sea slug **retains the chloroplasts** for their own photosynthetic use. This process is known as **kleptoplasty**.
-
