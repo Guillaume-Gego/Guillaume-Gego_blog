@@ -7,7 +7,7 @@ preview: astronaut_avatar.png
 output: distill::distill_article
 ---
 
-![](astronaut_avatar.png)
+![This is Eliott by the way, he will be watching on you to keep your personal data from being stolen! He  will occasionally write some articles too since he's my personnal assistant. Be nice to him, okay?](astronaut_avatar.png)
 
 Greetings dear reader, my name is Guillaume Gégo, and this is my blog :3
 

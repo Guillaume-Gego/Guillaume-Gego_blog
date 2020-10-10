@@ -1,5 +1,24 @@
 [
   {
+    "path": "posts/2020-10-10-amazing-nudibranchs/",
+    "title": "Nudibranchs",
+    "description": "Short introduction to a beautiful marine strangeness.",
+    "author": [
+      {
+        "name": "Guillaume Gégo",
+        "url": {
+          "https://guillaume-gego.github.io/Guillaume-Gego_blog/": {}
+        }
+      }
+    ],
+    "date": "2020-10-10",
+    "categories": [
+      "English for Science"
+    ],
+    "preview": "posts/2020-10-10-amazing-nudibranchs/images/Nudibranchs1.jpg",
+    "last_modified": "2020-10-10T02:44:49+02:00"
+  },
+  {
     "path": "posts/about/",
     "title": "About Me",
     "description": {},
@@ -12,53 +31,26 @@
     "date": "2020-10-10",
     "categories": [],
     "preview": "posts/about/astronaut_avatar.png",
-    "last_modified": "2020-10-10T02:32:30+02:00",
-    "preview_width": 565,
-    "preview_height": 565
-  },
-  {
-    "path": "posts/2019-10-25-biggest-rodent/",
-    "title": "Biggest rodent",
-    "description": "Analysis of \"Biggest rodent 'fought with teeth' like tusks\"",
-    "author": [
-      {
-        "name": "Student Unknown",
-        "url": {}
-      },
-      {
-        "name": "Van Lancker Ingrid",
-        "url": {}
-      },
-      {
-        "name": "Engels Guyliann",
-        "url": "https://guyliann.netlify.com/fr"
-      }
-    ],
-    "date": "2020-10-01",
-    "categories": [
-      "English for Science",
-      "Paleontology",
-      "Rodent"
-    ],
-    "preview": {},
-    "last_modified": "2020-10-09T12:34:48+02:00"
+    "last_modified": "2020-10-10T03:59:37+02:00",
+    "preview_width": 600,
+    "preview_height": 600
   },
   {
     "path": "posts/meal/",
-    "title": "My English Activity Log : MEAL",
+    "title": "My Not So Personal Diary (M.E.A.L)",
     "description": {},
     "author": [
       {
-        "name": "___",
+        "name": "Guillaume Gégo",
         "url": {}
       }
     ],
-    "date": "2020-10-01",
+    "date": "2020-10-10",
     "categories": [
       "English for Science",
       "M.E.A.L."
     ],
     "preview": {},
-    "last_modified": "2020-10-09T12:34:48+02:00"
+    "last_modified": "2020-10-10T03:06:57+02:00"
   }
 ]

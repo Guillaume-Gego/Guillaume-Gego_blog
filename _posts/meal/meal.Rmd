@@ -1,7 +1,7 @@
 ---
-title: "My English Activity Log : MEAL"
+title: "My Not So Personal Diary (M.E.A.L)"
 author:
-  - name: "___" 
+  - name: "Guillaume Gégo" 
 date: "`r Sys.Date()`"
 categories:
   - "English for Science"
@@ -9,23 +9,11 @@ categories:
 output: distill::distill_article
 ---
 
+# Entry n°1 (10 October 2020):
+It might be late right now, but it's never too late or too early to practice some English! This will section probably become a personal diary, although it wouldn't be very personal sinc emy English teacher (Bonjour M. Devilez :3) is going to read through most of these to test my English proficiency. I mean I don't mind, this blog is my only assignment for my uni English course since I'm already C2, so I'll comply and do my job wholeheartedly! 
 
-Here are a few examples (some of them are based on examples I've read on blogs so far):
+So today I slept over and I was late for online class, so no real biggie. Then I hurried my lass bottom to my violin class in Binche (somewhere in Belgium, not that important) and after trying not to sound like a dying nudibranch on the verge of climactic stroke for more than an hour, I came back home to work on my first article for this blog (go check it out, it's about (you guessed it) Nudibranchs!). Well that's all the time I've got for today (no but I want to commit sleep so I gtg). Oh yeah and I watched YouTube videos in English, like I always do, so be proud of me M.Devilez :)
 
-- Sept. 25th: I downloaded the 'BBC News' App on my phone. I've started reading/watching the news on the train for 15 min.
-
-- Oct. 5th: I watched 2 episodes of The Big Bang Theory (English with English subtitles). Pretty funny episodes.
-
-- Oct. 7th: I read 2 chapters of The Immortal Life of Henrietta Lacks. I found the book very interesting so far! It's quite sad but it's important to understand that we don't just work with cells. There are people and stories behind these cells.
-
-- Oct. 10th: I went to an English evening. It was nice. Even though I was a bit scared at first, it was easy to speak with people, as everyone has a different English level and I realised my English level is not that bad. I met nice people, an American guy from SHAPE and a Korean girl who's in Mons for a year.
-
-- Oct. 22nd: I watched a documentary about abortion. Very serious topic and not fun at all but I learned a lot of interesting facts about abortion around the world.
-
-- Oct. 27th: I started using Lyricstraining. This is soooo much fun. I love doing karaoke with my sister and we play together to guess the missing words. I love it!
-
-- Oct. 30th: I decided to change my device language into English. Now my smartphone, PS4 and Ipad are all configured in English.
-
-The bottom line is: have fun! It's a very important component when learning a new language.
-
+See you around!
+-Me
 
