@@ -1,0 +1,25 @@
+<form method='post' action='https://blogtrottr.com'>
+  <p>Enjoy this blog? Get notified of new posts via email:</p>
+  <input type='text' name='btr_email' />
+  <input type='hidden' name='btr_url'
+         value='http://Guillaume-Gego.github.io/Guillaume-Gego_blog/index.xml'/>
+  <input type='hidden' name='schedule_type' value='0' />
+  <input type='submit' value='Subscribe' />
+</form>
+
+</div>
+
+<div class="sidebar-section custom">
+  <h3>About this blog</h3>
+  This blog explores different scientific articles on a variety of topics and is used as a manner to show my English teacher that I know how to write in English. This blog was created using Markdown and <a href="https://www.r-project.org/">Rstudio</a>.
+
+</div>
+
+<div class="sidebar-section custom">
+  <h3>Search Engine</h3>
+  <form action="https://google.com/">
+    <input type="text" name="q" placeholder="Search...">
+    <input type="hidden" name="sites" 
+      value="http://Guillaume-Gego.github.io/Guillaume-Gego_blog/"> 
+    <button type="submit">Search</button>
+  </form>

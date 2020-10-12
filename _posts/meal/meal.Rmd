@@ -4,15 +4,14 @@ author:
   - name: "Guillaume Gégo" 
 date: "`r Sys.Date()`"
 categories:
-  - "English for Science"
-  - "M.E.A.L."
+  - "English log"
 output: distill::distill_article
 ---
 
 # Entry n°1 (10 October 2020):
-It might be late right now, but it's never too late or too early to practice some English! This will section probably become a personal diary, although it wouldn't be very personal sinc emy English teacher (Bonjour M. Devilez :3) is going to read through most of these to test my English proficiency. I mean I don't mind, this blog is my only assignment for my uni English course since I'm already C2, so I'll comply and do my job wholeheartedly! 
+It might be late right now, but it's never too late or too early to practice some English! This will section probably become a personal diary, although it wouldn't be very personal since my English teacher (Bonjour M. Devilez :3) is going to read through most of these to test my English proficiency. I mean I don't mind, this blog is my only assignment for my uni English course since I'm already C2, so I'll comply and do my job wholeheartedly! 
 
-So today I slept over and I was late for online class, so no real biggie. Then I hurried my lass bottom to my violin class in Binche (somewhere in Belgium, not that important) and after trying not to sound like a dying nudibranch on the verge of climactic stroke for more than an hour, I came back home to work on my first article for this blog (go check it out, it's about (you guessed it) Nudibranchs!). Well that's all the time I've got for today (no but I want to commit sleep so I gtg). Oh yeah and I watched YouTube videos in English, like I always do, so be proud of me M.Devilez :)
+So today I slept over and I was late for online class, so no real biggie. Then I hurried my lasy bottom to my violin class in Binche (somewhere in Belgium, not that important) and after trying not to sound like a dying nudibranch on the verge of climactic stroke for more than an hour, I came back home to work on my first article for this blog (go check it out, it's about (you guessed it) Nudibranchs!). Well that's all the time I've got for today (no but I want to commit sleep so I gtg). Oh yeah and I watched YouTube videos in English, like I always do, so be proud of me M.Devilez :)
 
 See you around!
 -Me

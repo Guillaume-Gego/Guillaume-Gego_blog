@@ -19,27 +19,27 @@
  <!--/radix_placeholder_import_source-->
 
   <!--radix_placeholder_meta_tags-->
-  <title>Guillaume Gégo's Blog: Recent posts</title>
+  <title>Guillaume Gégo's Blog: Untitled</title>
   
   
   <link rel="icon" type="image/png" href="astronaut_avatar.png"/>
   
   
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Guillaume Gégo&#39;s Blog: Recent posts"/>
+  <meta property="og:title" content="Guillaume Gégo&#39;s Blog: Untitled"/>
   <meta property="og:type" content="article"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="Guillaume Gégo&#39;s Blog"/>
   
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Guillaume Gégo&#39;s Blog: Recent posts"/>
+  <meta property="twitter:title" content="Guillaume Gégo&#39;s Blog: Untitled"/>
   
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site","listing"]}},"value":[{"type":"character","attributes":{},"value":["Recent posts"]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"character","attributes":{},"value":["posts"]}]}
+  {"type":"list","attributes":{},"value":[]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -1298,12 +1298,12 @@
 
 </head>
 
-<body class="layout-listing">
+<body>
 
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Recent posts","authors":[]}
+{"title":"Untitled","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1343,438 +1343,36 @@ Sections
 <!--/radix_placeholder_navigation_before_body-->
 <!--radix_placeholder_site_before_body-->
 <!--/radix_placeholder_site_before_body-->
-<!--radix_placeholder_article_listing-->
-
-<style type="text/css">
-
-/* Styles for listing layout (hide title) */
-.layout-listing d-title, .layout-listing .d-title {
-  display: none;
-}
-
-/* Styles for posts lists (not auto-injected) */
-
-
-.posts-with-sidebar {
-  padding-left: 45px;
-  padding-right: 45px;
-}
-
-.posts-list .description h2,
-.posts-list .description p {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
-}
-
-.posts-list .description h2 {
-  font-weight: 700;
-  border-bottom: none;
-  padding-bottom: 0;
-}
-
-.posts-list h2.post-tag {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  padding-bottom: 12px;
-}
-.posts-list {
-  margin-top: 60px;
-  margin-bottom: 24px;
-}
-
-.posts-list .post-preview {
-  text-decoration: none;
-  overflow: hidden;
-  display: block;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 24px 0;
-}
-
-.post-preview-last {
-  border-bottom: none !important;
-}
-
-.posts-list .posts-list-caption {
-  grid-column: screen;
-  font-weight: 400;
-}
-
-.posts-list .post-preview h2 {
-  margin: 0 0 6px 0;
-  line-height: 1.2em;
-  font-style: normal;
-  font-size: 24px;
-}
-
-.posts-list .post-preview p {
-  margin: 0 0 12px 0;
-  line-height: 1.4em;
-  font-size: 16px;
-}
-
-.posts-list .post-preview .thumbnail {
-  box-sizing: border-box;
-  margin-bottom: 24px;
-  position: relative;
-  max-width: 500px;
-}
-.posts-list .post-preview img {
-  width: 100%;
-  display: block;
-}
-
-.posts-list .metadata {
-  font-size: 12px;
-  line-height: 1.4em;
-  margin-bottom: 18px;
-}
-
-.posts-list .metadata > * {
-  display: inline-block;
-}
-
-.posts-list .metadata .publishedDate {
-  margin-right: 1em;
-}
-
-.posts-list .metadata .tags {
-  margin-top: 1em;
-}
-
-.posts-list .tags .tag {
-  color: rgba(0,0,0,0.67);
-  padding: 0.3em 0.5em;
-  margin: 0;
-  font-size: 80%;
-  border: 1px solid rgba(0,0,0,0.4);
-  border-radius: 3px;
-  text-transform: uppercase;
-  font-weight: 500;
-}
-
-.posts-list img {
-  opacity: 1;
-}
-
-.posts-list img[data-src] {
-  opacity: 0;
-}
-
-.posts-more {
-  clear: both;
-}
-
-
-.posts-sidebar {
-  font-size: 16px;
-}
-
-.posts-sidebar h3 {
-  font-size: 16px;
-  margin-top: 0;
-  margin-bottom: 0.5em;
-  font-weight: 400;
-  text-transform: uppercase;
-}
-
-.sidebar-section {
-  margin-bottom: 30px;
-}
-
-.categories ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.categories li {
-  color: rgba(0, 0, 0, 0.8);
-  margin-bottom: 0;
-}
-
-.categories li>a {
-  border-bottom: none;
-}
-
-.categories li>a:hover {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-}
-
-.categories .active {
-  font-weight: 600;
-}
-
-.categories .category-count {
-  color: rgba(0, 0, 0, 0.4);
-}
-
-
-@media(min-width: 768px) {
-  .posts-list .post-preview h2 {
-    font-size: 26px;
-  }
-  .posts-list .post-preview .thumbnail {
-    float: right;
-    width: 35%;
-    margin-bottom: 0;
-  }
-  .posts-list .post-preview .description {
-    float: left;
-    width: 45%;
-  }
-  .posts-list .post-preview .metadata {
-    float: left;
-    width: 15%;
-    margin-top: 8px;
-  }
-  .posts-list .post-preview p {
-    margin: 0 0 12px 0;
-    line-height: 1.5em;
-    font-size: 16px;
-  }
-  .posts-with-sidebar .posts-list {
-    float: left;
-    width: 72%;
-  }
-  .posts-with-sidebar .posts-sidebar {
-    float: right;
-    width: 20%;
-    margin-top: 60px;
-    padding-top: 24px;
-    padding-bottom: 24px;
-  }
-}
-
-.downlevel .posts-list .post-preview {
-  color: inherit;
-}
-
-</style>
-
-<script type="application/javascript">
-
-function init_posts_list() {
-
-  function load_image(img) {
-    var src = $(img).attr('data-src');
-    if (src) {
-      $(img).attr('src', src);
-      $(img).load(function() {
-        img.removeAttribute('data-src');
-      });
-    }
-  }
-
-  function set_posts_visible(posts, visible) {
-    if (visible) {
-
-      // show bottom border by default
-      $(posts).removeClass('post-preview-last');
-
-      // apply limits if need be
-      var max_posts = 25;
-      var apply_limits = $('.posts-container').hasClass('posts-apply-limit');
-      if (apply_limits && posts.length > max_posts) {
-        posts = $(posts).slice(0, max_posts);
-      } else {
-        $('.posts-more a').addClass('hidden');
-      }
-
-      // apply last style
-      $(posts.slice(-1)[0]).addClass('post-preview-last');
-
-      $(posts).removeClass('hidden');
-      $(posts).find('img[data-src]').each(function(i, img) {
-        load_image(img);
-      });
-    } else {
-      $(posts).addClass('hidden');
-    }
-  }
-
-  function apply_hash_filter() {
-
-    // clear active state
-    $('.categories .active').removeClass('active');
-
-    // mark all posts invisible to start
-    set_posts_visible($('.posts-list').children('a'), false);
-
-    // if we have a hash filter
-    if (window.location.hash) {
-
-      // mark posts that match the category visible
-      var page_category = window.location.hash.replace("#", "");
-      var posts = $('.post-metadata').map(function(idx, script) {
-        var metadata = $.parseJSON($(script).html());
-        var post = null;
-        $.each(metadata.categories, function(idx, category) {
-          category = category.replace(/ /g,"_");
-          if (category == page_category) {
-            post = $(script).parent().get();
-            return false;
-          }
-        });
-        return post;
-      });
-      set_posts_visible(posts, true);
-
-      // mark the hash active
-      $('.categories li>a[href="' + window.location.hash + '"]').addClass('active');
-
-    } else {
-
-      // no hash filter, make all posts visible (subject to max display)
-      set_posts_visible($('.posts-list').children(), true);
-
-    }
-  }
-
-  // more articles
-  function apply_post_limits(apply) {
-    if (apply) {
-      $('.posts-container').addClass('posts-apply-limit');
-      $('.posts-more a').removeClass('hidden');
-    } else {
-      $('.posts-container').removeClass('posts-apply-limit');
-      $('.posts-more a').addClass('hidden');
-    }
-  }
-
-  // hash filter handling
-  apply_hash_filter();
-  $(window).on('hashchange',function() {
-    apply_post_limits(true);
-    apply_hash_filter();
-  });
-
-  // more articles link
-  $('.posts-more a').click(function(e) {
-    e.preventDefault();
-    apply_post_limits(false);
-    apply_hash_filter();
-    return false;
-  });
-
-}
-
-</script>
-
-
-
-<div class="posts-container posts-with-sidebar posts-apply-limit l-screen-inset">
-<div class="posts-list">
-<h1 class="posts-list-caption">Recent posts</h1>
-<a href="posts/2020-10-10-amazing-nudibranchs/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["English for Science"]}</script>
-<div class="metadata">
-<div class="publishedDate">Oct. 10, 2020</div>
-</div>
-<div class="thumbnail">
-<img data-src="posts/2020-10-10-amazing-nudibranchs/images/Nudibranchs1.jpg"/>
-</div>
-<div class="description">
-<h2>Nudibranchs</h2>
-<p>Short introduction to a beautiful marine strangeness.</p>
-</div>
-</a>
-<a href="posts/about/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">Oct. 10, 2020</div>
-</div>
-<div class="thumbnail">
-<img data-src="posts/about/astronaut_avatar.png"/>
-</div>
-<div class="description">
-<h2>About Me</h2>
-<p></p>
-</div>
-</a>
-<a href="posts/meal/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["English for Science","M.E.A.L."]}</script>
-<div class="metadata">
-<div class="publishedDate">Oct. 10, 2020</div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>My Not So Personal Diary (M.E.A.L)</h2>
-<p></p>
-</div>
-</a>
-</div>
-<div class="posts-sidebar">
-<div class="sidebar-section subscribe">
-<h3>Subscribe</h3>
-<form method='post' action='https://blogtrottr.com'>
-  <p>Enjoy this blog? Get notified of new posts via email:</p>
-  <input type='text' name='btr_email' />
-  <input type='hidden' name='btr_url'
-         value='http://Guillaume-Gego.github.io/Guillaume-Gego_blog/index.xml'/>
-  <input type='hidden' name='schedule_type' value='0' />
-  <input type='submit' value='Subscribe' />
-</form>
-
-</div>
-
-<div class="sidebar-section custom">
-  <h3>About this blog</h3>
-  This blog explores different scientific articles on a variety of topics and is used as a manner to show my English teacher that I know how to write in English. This blog was created using Markdown and <a href="https://www.r-project.org/">Rstudio</a>.
-
-</div>
-
-<div class="sidebar-section custom">
-  <h3>Search Engine</h3>
-  <form action="https://google.com/">
-    <input type="text" name="q" placeholder="Search...">
-    <input type="hidden" name="sites" 
-      value="http://Guillaume-Gego.github.io/Guillaume-Gego_blog/"> 
-    <button type="submit">Search</button>
-  </form>
-
-</div>
-<div class="sidebar-section categories">
-<h3>Categories</h3>
-<ul>
-<li>
-<a href="#English_for_Science">English for Science</a>
-<span class="category-count">(2)</span>
-</li>
-<li>
-<a href="#M.E.A.L.">M.E.A.L.</a>
-<span class="category-count">(1)</span>
-</li>
-</ul>
-</div>
-</div>
-<div class="posts-more">
-<a href="#">More articles &raquo;</a>
-</div>
-</div>
-<!--/radix_placeholder_article_listing-->
 
 <div class="d-title">
-<h1>Recent posts</h1>
+<h1>sidebar-options.utf8</h1>
 
 </div>
 
 
 <div class="d-article">
-<p>.</p>
-<h1 id="homepage">Homepage</h1>
-<p>Welcome to my blog fellow earthling!</p>
-<p>This blog is divided in multiple sections (see navigation bar):</p>
-<ul>
-<li><strong>English Log</strong>: an open diary about my English practice for my university English Class.</li>
-<li><strong>Science 4U</strong>: a collection of scientific articles vulgarized by yours truly await you there. Topics range from random interests to specific Space-related articles.</li>
-</ul>
-<p>Find out more about the redactor of this beautiful blog in the <strong>About Me</strong> section.</p>
-<p>Quick access to <em>Github</em>, <em>Moodle</em> and <em>UMons</em> websites can be found by clicking their logos on the navigation bar.</p>
-<p>I hope you will enjoy your stay here!</p>
-<p>-Guillaume Gégo</p>
-<div class="layout-chunk" data-layout="l-body">
-
+<form method="post" action="https://blogtrottr.com">
+<p>
+Enjoy this blog? Get notified of new posts via email:
+</p>
+<input type='text' name='btr_email' /> <input type='hidden' name='btr_url'
+         value='http://Guillaume-Gego.github.io/Guillaume-Gego_blog/index.xml'/> <input type='hidden' name='schedule_type' value='0' /> <input type='submit' value='Subscribe' />
+</form>
 </div>
+<div class="sidebar-section custom">
+<h3>
+About this blog
+</h3>
+<p>This blog explores different scientific articles on a variety of topics and is used as a manner to show my English teacher that I know how to write in English. This blog was created using Markdown and <a href="https://www.r-project.org/">Rstudio</a>.</p>
+</div>
+<div class="sidebar-section custom">
+<h3>
+Search Engine
+</h3>
+<form action="https://google.com/">
+<input type="text" name="q" placeholder="Search..."> <input type="hidden" name="sites" 
+      value="http://Guillaume-Gego.github.io/Guillaume-Gego_blog/"> <button type="submit">Search</button>
+</form>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

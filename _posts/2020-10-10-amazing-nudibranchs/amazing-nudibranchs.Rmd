@@ -1,13 +1,14 @@
 ---
 title: "Nudibranchs"
 description: |
-  Short introduction to a beautiful marine strangeness.
+  Short introduction to a beautiful seaborne strangeness.
 author:
   - name: Guillaume Gégo
-    url: {https://guillaume-gego.github.io/Guillaume-Gego_blog/}
+    url: {}
 date: 10-10-2020
 categories:
-  - "English for Science"
+  - "Biology"
+  - "Science 4U"
 preview: images/Nudibranchs1.jpg
 #draft: TRUE
 bibliography: biblio/nudibranchs.bib

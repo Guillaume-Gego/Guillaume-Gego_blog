@@ -1,26 +1,26 @@
 .distill-site-nav {
   color: rgba(255, 255, 255, 0.8);
-  background-color: #083b5e;
-  font-size: 15px;
+  background-color: #6e8cab;
+  font-size: 18px;
   font-weight: 300;
 }
 
 .distill-site-nav a {
-  color: white;
-  text-decoration: white underline;
+  color: black;
+  text-decoration: bold;
 }
 
 .distill-site-nav a:hover {
-  color: grey;
+  color: white;
 }
 
 .distill-site-header {
-  color: white;
 }
 
 .distill-site-footer {
-  color: white;
+  color: #7e99b4;
 }
+
 
 @media print {
   .distill-site-nav {

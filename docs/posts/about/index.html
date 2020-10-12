@@ -23,6 +23,7 @@
 
 
 <link rel="canonical" href="http://Guillaume-Gego.github.io/Guillaume-Gego_blog/posts/about/"/>
+<link rel="icon" type="image/png" href="../../astronaut_avatar.png"/>
 
 <!--  https://schema.org/Article -->
 <meta property="article:published" itemprop="datePublished" content="2020-10-10"/>
@@ -2275,27 +2276,27 @@ distill-header .nav a {
 <style type="text/css">
 .distill-site-nav {
   color: rgba(255, 255, 255, 0.8);
-  background-color: #083b5e;
-  font-size: 15px;
+  background-color: #6e8cab;
+  font-size: 18px;
   font-weight: 300;
 }
 
 .distill-site-nav a {
-  color: white;
-  text-decoration: white underline;
+  color: black;
+  text-decoration: bold;
 }
 
 .distill-site-nav a:hover {
-  color: grey;
+  color: white;
 }
 
 .distill-site-header {
-  color: white;
 }
 
 .distill-site-footer {
-  color: white;
+  color: #7e99b4;
 }
+
 
 @media print {
   .distill-site-nav {
@@ -2322,16 +2323,29 @@ distill-header .nav a {
 <header class="header header--fixed" role="banner">
 <nav class="distill-site-nav distill-site-header">
 <div class="nav-left">
+<a class="logo" href="https://web.umons.ac.be/">
+<img src="../../UMons_logo.png"/>
+</a>
 <a href="../../index.html" class="title">Guillaume Gégo's Blog</a>
 </div>
 <div class="nav-right">
-<a class="nav-image">
-<img src="../../astronaut_avatar.png"/>
-</a>
 <a href="../../index.html">Home</a>
-<a href="../../posts/meal/index.html">M.E.A.L.</a>
 <a href="../../posts/about/index.html">About Me</a>
-<a href="https://github.com/Guillaume-Gego/Guillaume-Gego_blog">
+<div class="nav-dropdown">
+<button class="nav-dropbtn">
+Sections
+ 
+<span class="down-arrow">&#x25BE;</span>
+</button>
+<div class="nav-dropdown-content">
+<a href="../../posts/meal/index.html">English log</a>
+<a href="../../blog-posts.html">Science 4U</a>
+</div>
+</div>
+<a href="https://moodle.umons.ac.be/" class="nav-image">
+<img src="../../Moodle_logo.png"/>
+</a>
+<a href="https://github.com/Guillaume-Gego/Guillaume-Gego_blog/">
 <i class="fab fa-github"></i>
 </a>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
@@ -2392,7 +2406,7 @@ distill-header .nav a {
     </span>
   </p>
   <script id="dsq-count-scr" src="https://https-guillaume-gego-github-io-guillaume-gego-blog.disqus.com/count.js" async></script>
-  <div id="disqus_thread" class="hidden"></div>
+  <div id="disqus_thread"></div>
   <script>
 var disqus_config = function () {
   this.page.url = 'http://Guillaume-Gego.github.io/Guillaume-Gego_blog/posts/about/';
@@ -2405,6 +2419,34 @@ var disqus_config = function () {
   (d.head || d.body).appendChild(s);
 })();
 </script>
+  <p>
+    <div class="subscribe"><form method='post' action='https://blogtrottr.com'>
+  <p>Enjoy this blog? Get notified of new posts via email:</p>
+  <input type='text' name='btr_email' />
+  <input type='hidden' name='btr_url'
+         value='http://Guillaume-Gego.github.io/Guillaume-Gego_blog/index.xml'/>
+  <input type='hidden' name='schedule_type' value='0' />
+  <input type='submit' value='Subscribe' />
+</form>
+
+</div>
+
+<div class="sidebar-section custom">
+  <h3>About this blog</h3>
+  This blog explores different scientific articles on a variety of topics and is used as a manner to show my English teacher that I know how to write in English. This blog was created using Markdown and <a href="https://www.r-project.org/">Rstudio</a>.
+
+</div>
+
+<div class="sidebar-section custom">
+  <h3>Search Engine</h3>
+  <form action="https://google.com/">
+    <input type="text" name="q" placeholder="Search...">
+    <input type="hidden" name="sites" 
+      value="http://Guillaume-Gego.github.io/Guillaume-Gego_blog/"> 
+    <button type="submit">Search</button>
+  </form>
+</div>
+  </p>
 </div>
 <!--/radix_placeholder_article_footer-->
 </div>

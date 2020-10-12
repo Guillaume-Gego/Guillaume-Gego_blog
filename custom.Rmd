@@ -1,0 +1,18 @@
+---
+title: "Search"
+---
+<div class="sidebar-section custom">
+  <h3>About this blog</h3>
+  This blog explores different scientific articles on a variety of topics and is used as a manner to show my English teacher that I know how to write in English. This blog was created using Markdown and <a href="https://www.r-project.org/">Rstudio</a>.
+
+</div>
+
+<div class="sidebar-section custom">
+  <h3>Search Engine</h3>
+  <form action="https://google.com/">
+    <input type="text" name="q" placeholder="Search...">
+    <input type="hidden" name="sites" 
+      value="http://Guillaume-Gego.github.io/Guillaume-Gego_blog/"> 
+    <button type="submit">Search</button>
+  </form>
+</div>

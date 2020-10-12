@@ -1,23 +1,35 @@
-name: "blog-template"
+name: "Guillaume-Gego_blog"
 title: "Guillaume Gégo's Blog"
 output_dir: "docs"
+favicon: astronaut_avatar.png
 navbar:
+  logo:
+    image: UMons_logo.png
+    href: https://web.umons.ac.be/
+  search: true
   right:
-    - image: astronaut_avatar.png
     - text: "Home"
       href: index.html
-    - text: "M.E.A.L."
-      href: "posts/meal/index.html"
     - text: "About Me"
       href: "posts/about/index.html"
+    - text: "Sections"
+      menu:
+        - text: "English log"
+          href: "posts/meal/index.html"
+        - text: "Science 4U"
+          href: blog-posts.html
+    - image: Moodle_logo.png
+      href: https://moodle.umons.ac.be/
     - icon: fab fa-github
-      href: https://github.com/Guillaume-Gego/Guillaume-Gego_blog
+      href: https://github.com/Guillaume-Gego/Guillaume-Gego_blog/
 base_url: http://Guillaume-Gego.github.io/Guillaume-Gego_blog/
 collections:
     posts:
       share: [twitter, linkedin, facebook]
+      subscribe: sidebar-options.Rmd
       disqus:
         shortname: https-guillaume-gego-github-io-guillaume-gego-blog
+        hidden: false
 output:
   distill::distill_article:
     css: style.css
