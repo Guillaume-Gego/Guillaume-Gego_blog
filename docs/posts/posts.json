@@ -1,8 +1,8 @@
 [
   {
-    "path": "posts/2020-10-10-amazing-nudibranchs/",
-    "title": "Nudibranchs",
-    "description": "Short introduction to a beautiful marine strangeness.",
+    "path": "posts/2020-10-28-spacebiology1/",
+    "title": "Geologists simulate soil conditions to help grow plants on Mars",
+    "description": "Humankind's next giant step may be onto Mars. But before those missions can begin, scientists need to make scores of breakthrough advances, including learning how to grow crops on the red planet.",
     "author": [
       {
         "name": "Guillaume Gégo",
@@ -11,12 +11,13 @@
         }
       }
     ],
-    "date": "2020-10-10",
+    "date": "2020-10-27",
     "categories": [
-      "English for Science"
+      "Astrobiology",
+      "Science 4U"
     ],
-    "preview": "posts/2020-10-10-amazing-nudibranchs/images/Nudibranchs1.jpg",
-    "last_modified": "2020-10-10T02:44:49+02:00"
+    "preview": "posts/2020-10-28-spacebiology1/SpaceBiology1.jpg",
+    "last_modified": "2020-10-28T23:19:44+01:00"
   },
   {
     "path": "posts/about/",
@@ -52,5 +53,23 @@
     ],
     "preview": {},
     "last_modified": "2020-10-10T03:06:57+02:00"
+  },
+  {
+    "path": "posts/2020-10-10-amazing-nudibranchs/",
+    "title": "Nudibranchs",
+    "description": "Short introduction to a beautiful seaborne strangeness.",
+    "author": [
+      {
+        "name": "Guillaume Gégo",
+        "url": {}
+      }
+    ],
+    "date": "2020-10-10",
+    "categories": [
+      "Biology",
+      "Science 4U"
+    ],
+    "preview": "posts/2020-10-10-amazing-nudibranchs/images/Nudibranchs1.jpg",
+    "last_modified": "2020-10-28T23:19:51+01:00"
   }
 ]

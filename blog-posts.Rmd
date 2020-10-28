@@ -4,41 +4,8 @@ site: distill::distill_website
 listing: 
   posts:
     - 2020-10-10-amazing-nudibranchs
+    - 2020-10-28-spacebiology1
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ```{r, echo = FALSE, eval = FALSE}
 #distill::create_post("my post") # use this fonction to create a new post
