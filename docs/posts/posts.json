@@ -17,7 +17,25 @@
       "Science 4U"
     ],
     "preview": "posts/2020-10-28-spacebiology1/SpaceBiology1.jpg",
-    "last_modified": "2020-10-28T23:19:44+01:00"
+    "last_modified": "2020-10-29T01:05:51+01:00"
+  },
+  {
+    "path": "posts/2020-10-10-amazing-nudibranchs/",
+    "title": "Nudibranchs",
+    "description": "Short introduction to a beautiful seaborne strangeness.",
+    "author": [
+      {
+        "name": "Guillaume Gégo",
+        "url": {}
+      }
+    ],
+    "date": "2020-10-10",
+    "categories": [
+      "Biology",
+      "Science 4U"
+    ],
+    "preview": "posts/2020-10-10-amazing-nudibranchs/images/Nudibranchs1.jpg",
+    "last_modified": "2020-10-28T23:19:52+01:00"
   },
   {
     "path": "posts/about/",
@@ -53,23 +71,5 @@
     ],
     "preview": {},
     "last_modified": "2020-10-10T03:06:57+02:00"
-  },
-  {
-    "path": "posts/2020-10-10-amazing-nudibranchs/",
-    "title": "Nudibranchs",
-    "description": "Short introduction to a beautiful seaborne strangeness.",
-    "author": [
-      {
-        "name": "Guillaume Gégo",
-        "url": {}
-      }
-    ],
-    "date": "2020-10-10",
-    "categories": [
-      "Biology",
-      "Science 4U"
-    ],
-    "preview": "posts/2020-10-10-amazing-nudibranchs/images/Nudibranchs1.jpg",
-    "last_modified": "2020-10-28T23:19:51+01:00"
   }
 ]

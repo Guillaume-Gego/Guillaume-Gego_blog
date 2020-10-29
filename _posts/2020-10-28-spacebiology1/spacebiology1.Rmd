@@ -19,11 +19,12 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
-
-## Source of the article with publication date and word count:
-Source of the article [Science Daily](https://www.sciencedaily.com/releases/2020/10/201027105405.htm)
+![](SpaceBiology1.jpg)
   
-Word count: 636
+## Informations about the article
+**Source of the article:** [Science Daily](https://www.sciencedaily.com/releases/2020/10/201027105405.htm)
+  
+**Word count:** 636
   
 ## Vocabulary
 
