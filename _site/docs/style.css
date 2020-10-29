@@ -1,0 +1,40 @@
+.distill-site-nav {
+  font-weight: 400;
+}
+
+.distill-site-header {
+  font-size: 18px;
+  background-image: url('https://blog.pixlr.com/wp-content/uploads/2019/03/stars-pattern.png');
+}
+
+.distill-site-footer {
+}
+
+.distill-site-nav a {
+  text-decoration: bold;
+}
+
+.distill-site-nav a:hover {
+  color: white;
+  border-bottom: 1px white;
+}
+
+@media print {
+  .distill-site-nav {
+    display: none;
+  }
+}
+
+/*-- Additional custom styles--*/
+.categories li > a:hover {
+  color: #FDE9B3;
+  border-bottom: 1px black;
+}
+
+p a:hover  {
+  color: #FDE9B3;
+}
+
+/*
+6e8cab
+*/

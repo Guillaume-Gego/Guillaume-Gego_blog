@@ -3,7 +3,7 @@ title: "Search"
 ---
 <div class="sidebar-section custom">
   <h3>About this blog</h3>
-  This blog explores different scientific articles on a variety of topics and is used as a manner to show my English teacher that I know how to write in English. This blog was created using Markdown and <a href="https://www.r-project.org/">Rstudio</a>.
+  This blog explores different scientific articles on a variety of topics. This blog was created using Markdown and <a href="https://www.r-project.org/">Rstudio</a>.
 
 </div>
 

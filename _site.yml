@@ -1,13 +1,14 @@
 name: "Guillaume-Gego_blog"
-title: "Guillaume Gégo's Blog"
-output_dir: "docs"
+title: "AstroBio Blog"
 favicon: astronaut_avatar.png
 navbar:
+  search: TRUE
   logo:
     image: UMons_logo.png
     href: https://web.umons.ac.be/
-  search: true
   right:
+    #- text: "RSS Feed"
+    #  href: index.xml
     - text: "Home"
       href: index.html
     - text: "About Me"
@@ -24,12 +25,12 @@ navbar:
       href: https://github.com/Guillaume-Gego/Guillaume-Gego_blog/
 base_url: http://Guillaume-Gego.github.io/Guillaume-Gego_blog/
 collections:
-    posts:
-      share: [twitter, linkedin, facebook]
-      subscribe: sidebar-options.Rmd
-      disqus:
-        shortname: https-guillaume-gego-github-io-guillaume-gego-blog
-        hidden: false
+  posts:
+    share: [twitter, linkedin, facebook]
+    subscribe: sidebar-options.Rmd
+    disqus:
+      shortname: https-guillaume-gego-github-io-guillaume-gego-blog
+      hidden: false
 output:
   distill::distill_article:
     css: style.css

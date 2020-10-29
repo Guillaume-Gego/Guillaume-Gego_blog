@@ -1,0 +1,75 @@
+[
+  {
+    "path": "posts/2020-10-28-spacebiology1/",
+    "title": "Geologists simulate soil conditions to help grow plants on Mars",
+    "description": "Humankind's next giant step may be onto Mars. But before those missions can begin, scientists need to make scores of breakthrough advances, including learning how to grow crops on the red planet.",
+    "author": [
+      {
+        "name": "Guillaume Gégo",
+        "url": {
+          "https://guillaume-gego.github.io/Guillaume-Gego_blog/": {}
+        }
+      }
+    ],
+    "date": "2020-10-27",
+    "categories": [
+      "Astrobiology",
+      "Science 4U"
+    ],
+    "preview": "posts/2020-10-28-spacebiology1/SpaceBiology1.jpg",
+    "last_modified": "2020-10-29T01:05:51+01:00"
+  },
+  {
+    "path": "posts/2020-10-10-amazing-nudibranchs/",
+    "title": "Nudibranchs",
+    "description": "Short introduction to a beautiful seaborne strangeness.",
+    "author": [
+      {
+        "name": "Guillaume Gégo",
+        "url": {}
+      }
+    ],
+    "date": "2020-10-10",
+    "categories": [
+      "Biology",
+      "Science 4U"
+    ],
+    "preview": "posts/2020-10-10-amazing-nudibranchs/images/Nudibranchs1.jpg",
+    "last_modified": "2020-10-28T23:19:52+01:00"
+  },
+  {
+    "path": "posts/about/",
+    "title": "About Me",
+    "description": {},
+    "author": [
+      {
+        "name": "Guillaume Gégo",
+        "url": {}
+      }
+    ],
+    "date": "2020-10-10",
+    "categories": [],
+    "preview": "posts/about/astronaut_avatar.png",
+    "last_modified": "2020-10-10T03:59:37+02:00",
+    "preview_width": 600,
+    "preview_height": 600
+  },
+  {
+    "path": "posts/meal/",
+    "title": "My Not So Personal Diary (M.E.A.L)",
+    "description": {},
+    "author": [
+      {
+        "name": "Guillaume Gégo",
+        "url": {}
+      }
+    ],
+    "date": "2020-10-10",
+    "categories": [
+      "English for Science",
+      "M.E.A.L."
+    ],
+    "preview": {},
+    "last_modified": "2020-10-10T03:06:57+02:00"
+  }
+]

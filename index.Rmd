@@ -6,12 +6,14 @@ listing: posts
 .  
   
 # Homepage
-Welcome to my blog fellow earthling!
+Welcome to my **ABB** fellow earthling!
 
-This blog is divided in multiple sections (see navigation bar):
+ABB stands for **AstroBio Blog**. Any resemblance with a famous news source is purely coincidental.
+
+This blog is divided in multiple sections (see *navigation bar*):
 
 * **English Log**: an open diary about my English practice for my university English Class.
-* **Science 4U**: a collection of scientific articles vulgarized by yours truly await you there. Topics range from random interests to specific Space-related articles. Mostly Astrobiology though :)
+* **Science 4U**: a collection of scientific articles vulgarized by yours truly await you there. Topics range from random interests to specific Space-related articles (Mostly Astrobiology though).
 
 Find out more about the redactor of this beautiful blog in the **About Me** section. 
 
@@ -19,11 +21,11 @@ Quick access to *Github*, *Moodle* and *UMons* websites can be found by clicking
 
 I hope you will enjoy your stay here!
 
--Guillaume Gégo
-
-
+~Guillaume Gégo, 10/29/2020~
 
 ```{r, echo = FALSE, eval = FALSE}
 #distill::create_post("my post") # use this fonction to create a new post
 ```
+
+
 
