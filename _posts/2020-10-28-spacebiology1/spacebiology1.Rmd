@@ -4,8 +4,7 @@ description: |
   Humankind's next giant step may be onto Mars. But before those missions can begin, scientists need to make scores of breakthrough advances, including learning how to grow crops on the red planet.
 author:
   - name: Guillaume Gégo
-    url:
-      https://guillaume-gego.github.io/Guillaume-Gego_blog/: {}
+    url: {}
 date: 10-27-2020
 categories:
   - "Astrobiology"
@@ -22,7 +21,9 @@ knitr::opts_chunk$set(echo = FALSE)
 ![](SpaceBiology1.jpg)
   
 ## Informations about the article
-**Source of the article:** [Science Daily](https://www.sciencedaily.com/releases/2020/10/201027105405.htm)
+**Source of the article:** Science Daily: [link](https://www.sciencedaily.com/releases/2020/10/201027105405.htm)
+  
+Icarus (research paper): [link](https://www.sciencedirect.com/science/article/pii/S0019103520304061?via%3Dihub)
   
 **Word count:** 636
   

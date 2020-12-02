@@ -1,0 +1,1801 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+  <meta name="generator" content="distill" />
+
+  <style type="text/css">
+  /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
+  body {
+    visibility: hidden;
+  }
+  </style>
+
+ <!--radix_placeholder_import_source-->
+ <!--/radix_placeholder_import_source-->
+
+  <!--radix_placeholder_meta_tags-->
+  <title>Increase rate of belgian population density by region between 1992 and 2019</title>
+  
+  <meta property="description" itemprop="description" content="This post will explore the increase rate of the belgian population density by region between 1992 and 2019."/>
+  
+  
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2020-11-16"/>
+  <meta property="article:created" itemprop="dateCreated" content="2020-11-16"/>
+  <meta name="article:author" content="Guillaume Gégo"/>
+  
+  <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
+  <meta property="og:title" content="Increase rate of belgian population density by region between 1992 and 2019"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:description" content="This post will explore the increase rate of the belgian population density by region between 1992 and 2019."/>
+  <meta property="og:locale" content="en_US"/>
+  
+  <!--  https://dev.twitter.com/cards/types/summary -->
+  <meta property="twitter:card" content="summary"/>
+  <meta property="twitter:title" content="Increase rate of belgian population density by region between 1992 and 2019"/>
+  <meta property="twitter:description" content="This post will explore the increase rate of the belgian population density by region between 1992 and 2019."/>
+  
+  <!--/radix_placeholder_meta_tags-->
+  <!--radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-rmarkdown-metadata">
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","categories","preview","output"]}},"value":[{"type":"character","attributes":{},"value":["Increase rate of belgian population density by region between 1992 and 2019"]},{"type":"character","attributes":{},"value":["This post will explore the increase rate of the belgian population density by region between 1992 and 2019.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Guillaume Gégo"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["11-16-2020"]},{"type":"character","attributes":{},"value":["Demography","Data Science 1"]},{"type":"character","attributes":{},"value":["SpaceBiology1.jpg"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
+  </script>
+  <!--/radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["data/belgique.rds","data/region_bxl_ap_2000_meta.csv","data/region_bxl_ap_2000.rds","data/region_bxl_av_2000.rds","data/region_flamande_ap_2000.xls","data/region_flamande_av_2000.xls","data/region_wallonne_ap_2000.csv","data/region_wallonne_av_2000.csv","Graphe.png","sdd1_files/bowser-1.9.3/bowser.min.js","sdd1_files/distill-2.2.21/template.v2.js","sdd1_files/figure-html5/unnamed-chunk-3-1.png","sdd1_files/jquery-1.11.3/jquery.min.js","sdd1_files/pagedtable-1.1/css/pagedtable.css","sdd1_files/pagedtable-1.1/js/pagedtable.js","sdd1_files/webcomponents-2.0.0/webcomponents.js","Spreadsheets/~$Martian_regolith_simulants.xlsx","Spreadsheets/Martian_regolith_simulants.xlsx"]}
+  </script>
+  <!--radix_placeholder_navigation_in_header-->
+  <!--/radix_placeholder_navigation_in_header-->
+  <!--radix_placeholder_distill-->
+  
+  <style type="text/css">
+  
+  body {
+    background-color: white;
+  }
+  
+  .pandoc-table {
+    width: 100%;
+  }
+  
+  .pandoc-table>caption {
+    margin-bottom: 10px;
+  }
+  
+  .pandoc-table th:not([align]) {
+    text-align: left;
+  }
+  
+  .pagedtable-footer {
+    font-size: 15px;
+  }
+  
+  .html-widget {
+    margin-bottom: 2.0em;
+  }
+  
+  .l-screen-inset {
+    padding-right: 16px;
+  }
+  
+  .l-screen .caption {
+    margin-left: 10px;
+  }
+  
+  .shaded {
+    background: rgb(247, 247, 247);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .shaded .html-widget {
+    margin-bottom: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .shaded .shaded-content {
+    background: white;
+  }
+  
+  .text-output {
+    margin-top: 0;
+    line-height: 1.5em;
+  }
+  
+  .hidden {
+    display: none !important;
+  }
+  
+  d-article {
+    padding-bottom: 30px;
+  }
+  
+  d-appendix {
+    padding-top: 30px;
+  }
+  
+  d-article>p>img {
+    width: 100%;
+  }
+  
+  d-article iframe {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 2.0em;
+    width: 100%;
+  }
+  
+  figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+  
+  /* CSS for table of contents */
+  
+  .d-toc {
+    color: rgba(0,0,0,0.8);
+    font-size: 0.8em;
+    line-height: 1em;
+  }
+  
+  .d-toc-header {
+    font-size: 0.6rem;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 1.3em;
+  }
+  
+  .d-toc a {
+    border-bottom: none;
+  }
+  
+  .d-toc ul {
+    padding-left: 0;
+  }
+  
+  .d-toc li>ul {
+    padding-top: 0.8em;
+    padding-left: 16px;
+    margin-bottom: 0.6em;
+  }
+  
+  .d-toc ul,
+  .d-toc li {
+    list-style-type: none;
+  }
+  
+  .d-toc li {
+    margin-bottom: 0.9em;
+  }
+  
+  .d-toc-separator {
+    margin-top: 20px;
+    margin-bottom: 2em;
+  }
+  
+  .d-article-with-toc {
+    border-top: none;
+    padding-top: 0;
+  }
+  
+  
+  
+  /* Tweak code blocks (note that this CSS is repeated above in an injection
+     into the d-code shadow dom) */
+  
+  d-code {
+    overflow-x: auto !important;
+  }
+  
+  pre.d-code code.d-code {
+    padding-left: 10px;
+    font-size: 12px;
+    border-left: 2px solid rgba(0,0,0,0.1);
+  }
+  
+  pre.text-output {
+  
+    font-size: 12px;
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+  
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+  
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+  
+  @media(min-width: 768px) {
+  
+  d-code {
+    overflow-x: visible !important;
+  }
+  
+  pre.d-code code.d-code  {
+      padding-left: 18px;
+      font-size: 14px;
+  }
+  pre.text-output {
+    font-size: 14px;
+  }
+  }
+  
+  /* Figure */
+  
+  .figure {
+    position: relative;
+    margin-bottom: 2.5em;
+    margin-top: 1.5em;
+  }
+  
+  .figure img {
+    width: 100%;
+  }
+  
+  .figure .caption {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    line-height: 1.5em;
+  }
+  
+  .figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+  
+  .figure .caption a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .figure .caption b,
+  .figure .caption strong, {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1.0);
+  }
+  
+  
+  
+  /* Tweak 1000px media break to show more text */
+  
+  @media(min-width: 1000px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 80px [middle-start] 50px [text-start kicker-end] 65px 65px 65px 65px 65px 65px 65px 65px [text-end gutter-start] 65px [middle-end] 65px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 16px;
+    }
+  
+    .grid {
+      grid-column-gap: 16px;
+    }
+  
+    d-article {
+      font-size: 1.06rem;
+      line-height: 1.7em;
+    }
+    figure .caption, .figure .caption, figure figcaption {
+      font-size: 13px;
+    }
+  }
+  
+  @media(min-width: 1180px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 32px;
+    }
+  
+    .grid {
+      grid-column-gap: 32px;
+    }
+  }
+  
+  
+  /* Get the citation styles for the appendix (not auto-injected on render since
+     we do our own rendering of the citation appendix) */
+  
+  d-appendix .citation-appendix,
+  .d-appendix .citation-appendix {
+    font-size: 11px;
+    line-height: 15px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 18px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.02);
+    padding: 10px 18px;
+    border-radius: 3px;
+    color: rgba(150, 150, 150, 1);
+    overflow: hidden;
+    margin-top: -12px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  
+  
+  /* Social footer */
+  
+  .social_footer {
+    margin-top: 30px;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.67);
+  }
+  
+  .disqus-comments {
+    margin-right: 30px;
+  }
+  
+  .disqus-comment-count {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+  
+  #disqus_thread {
+    margin-top: 30px;
+  }
+  
+  .article-sharing a {
+    border-bottom: none;
+    margin-right: 8px;
+  }
+  
+  .article-sharing a:hover {
+    border-bottom: none;
+  }
+  
+  .sidebar-section.subscribe {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+  
+  .subscribe p {
+    margin-bottom: 0.5em;
+  }
+  
+  
+  .article-footer .subscribe {
+    font-size: 15px;
+    margin-top: 45px;
+  }
+  
+  
+  /* Improve display for browsers without grid (IE/Edge <= 15) */
+  
+  .downlevel {
+    line-height: 1.6em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+  }
+  
+  .downlevel .d-title {
+    padding-top: 6rem;
+    padding-bottom: 1.5rem;
+  }
+  
+  .downlevel .d-title h1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.1em;
+    margin: 0 0 0.5rem;
+  }
+  
+  .downlevel .d-title p {
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.55em;
+    margin-top: 0;
+  }
+  
+  .downlevel .d-byline {
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    font-size: 0.8rem;
+    line-height: 1.8em;
+  }
+  
+  .downlevel .section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .downlevel .d-article {
+    font-size: 1.06rem;
+    line-height: 1.7em;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+  
+  
+  .downlevel .d-appendix {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: none;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.5);
+    padding-top: 40px;
+    padding-bottom: 48px;
+  }
+  
+  .downlevel .footnotes ol {
+    padding-left: 13px;
+  }
+  
+  .downlevel .base-grid,
+  .downlevel .distill-header,
+  .downlevel .d-title,
+  .downlevel .d-abstract,
+  .downlevel .d-article,
+  .downlevel .d-appendix,
+  .downlevel .distill-appendix,
+  .downlevel .d-byline,
+  .downlevel .d-footnote-list,
+  .downlevel .d-citation-list,
+  .downlevel .distill-footer,
+  .downlevel .appendix-bottom,
+  .downlevel .posts-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  
+  @media(min-width: 768px) {
+    .downlevel .base-grid,
+    .downlevel .distill-header,
+    .downlevel .d-title,
+    .downlevel .d-abstract,
+    .downlevel .d-article,
+    .downlevel .d-appendix,
+    .downlevel .distill-appendix,
+    .downlevel .d-byline,
+    .downlevel .d-footnote-list,
+    .downlevel .d-citation-list,
+    .downlevel .distill-footer,
+    .downlevel .appendix-bottom,
+    .downlevel .posts-container {
+    padding-left: 150px;
+    padding-right: 150px;
+    max-width: 900px;
+  }
+  }
+  
+  .downlevel pre code {
+    display: block;
+    border-left: 2px solid rgba(0, 0, 0, .1);
+    padding: 0 0 0 20px;
+    font-size: 14px;
+  }
+  
+  .downlevel code, .downlevel pre {
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+  
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+  
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+  
+  </style>
+  
+  <script type="application/javascript">
+  
+  function is_downlevel_browser() {
+    if (bowser.isUnsupportedBrowser({ msie: "12", msedge: "16"},
+                                   window.navigator.userAgent)) {
+      return true;
+    } else {
+      return window.load_distill_framework === undefined;
+    }
+  }
+  
+  // show body when load is complete
+  function on_load_complete() {
+  
+    // set body to visible
+    document.body.style.visibility = 'visible';
+  
+    // force redraw for leaflet widgets
+    if (window.HTMLWidgets) {
+      var maps = window.HTMLWidgets.findAll(".leaflet");
+      $.each(maps, function(i, el) {
+        var map = this.getMap();
+        map.invalidateSize();
+        map.eachLayer(function(layer) {
+          if (layer instanceof L.TileLayer)
+            layer.redraw();
+        });
+      });
+    }
+  
+    // trigger 'shown' so htmlwidgets resize
+    $('d-article').trigger('shown');
+  }
+  
+  function init_distill() {
+  
+    init_common();
+  
+    // create front matter
+    var front_matter = $('<d-front-matter></d-front-matter>');
+    $('#distill-front-matter').wrap(front_matter);
+  
+    // create d-title
+    $('.d-title').changeElementType('d-title');
+  
+    // create d-byline
+    var byline = $('<d-byline></d-byline>');
+    $('.d-byline').replaceWith(byline);
+  
+    // create d-article
+    var article = $('<d-article></d-article>');
+    $('.d-article').wrap(article).children().unwrap();
+  
+    // move posts container into article
+    $('.posts-container').appendTo($('d-article'));
+  
+    // create d-appendix
+    $('.d-appendix').changeElementType('d-appendix');
+  
+    // create d-bibliography
+    var bibliography = $('<d-bibliography></d-bibliography>');
+    $('#distill-bibliography').wrap(bibliography);
+  
+    // flag indicating that we have appendix items
+    var appendix = $('.appendix-bottom').children('h3').length > 0;
+  
+    // replace citations with <d-cite>
+    $('.citation').each(function(i, val) {
+      appendix = true;
+      var cites = $(this).attr('data-cites').split(" ");
+      var dt_cite = $('<d-cite></d-cite>');
+      dt_cite.attr('key', cites.join());
+      $(this).replaceWith(dt_cite);
+    });
+    // remove refs
+    $('#refs').remove();
+  
+    // replace footnotes with <d-footnote>
+    $('.footnote-ref').each(function(i, val) {
+      appendix = true;
+      var href = $(this).attr('href');
+      var id = href.replace('#', '');
+      var fn = $('#' + id);
+      var fn_p = $('#' + id + '>p');
+      fn_p.find('.footnote-back').remove();
+      var text = fn_p.html();
+      var dtfn = $('<d-footnote></d-footnote>');
+      dtfn.html(text);
+      $(this).replaceWith(dtfn);
+    });
+    // remove footnotes
+    $('.footnotes').remove();
+  
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      var id = $(this).attr('id');
+      $('.d-toc a[href="#' + id + '"]').parent().remove();
+      appendix = true;
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
+    });
+  
+    // show d-appendix if we have appendix content
+    $("d-appendix").css('display', appendix ? 'grid' : 'none');
+  
+    // replace code blocks with d-code
+    $('pre>code').each(function(i, val) {
+      var code = $(this);
+      var pre = code.parent();
+      var clz = "";
+      var language = pre.attr('class');
+      if (language) {
+        // map unknown languages to "clike" (without this they just dissapear)
+        if ($.inArray(language, ["bash", "clike", "css", "go", "html",
+                                 "javascript", "js", "julia", "lua", "markdown",
+                                 "markup", "mathml", "python", "svg", "xml"]) == -1)
+          language = "clike";
+        language = ' language="' + language + '"';
+        var dt_code = $('<d-code block' + language + clz + '></d-code>');
+        dt_code.text(code.text());
+        pre.replaceWith(dt_code);
+      } else {
+        code.addClass('text-output').unwrap().changeElementType('pre');
+      }
+    });
+  
+    // localize layout chunks to just output
+    $('.layout-chunk').each(function(i, val) {
+  
+      // capture layout
+      var layout = $(this).attr('data-layout');
+  
+      // apply layout to markdown level block elements
+      var elements = $(this).children().not('d-code, pre.text-output, script');
+      elements.each(function(i, el) {
+        var layout_div = $('<div class="' + layout + '"></div>');
+        if (layout_div.hasClass('shaded')) {
+          var shaded_content = $('<div class="shaded-content"></div>');
+          $(this).wrap(shaded_content);
+          $(this).parent().wrap(layout_div);
+        } else {
+          $(this).wrap(layout_div);
+        }
+      });
+  
+  
+      // unwrap the layout-chunk div
+      $(this).children().unwrap();
+    });
+  
+    // load distill framework
+    load_distill_framework();
+  
+    // wait for window.distillRunlevel == 4 to do post processing
+    function distill_post_process() {
+  
+      if (!window.distillRunlevel || window.distillRunlevel < 4)
+        return;
+  
+      // hide author/affiliations entirely if we have no authors
+      var front_matter = JSON.parse($("#distill-front-matter").html());
+      var have_authors = front_matter.authors && front_matter.authors.length > 0;
+      if (!have_authors)
+        $('d-byline').addClass('hidden');
+  
+      // table of contents
+      if (have_authors) // adjust border if we are in authors
+        $('.d-toc').parent().addClass('d-article-with-toc');
+  
+      // strip links that point to #
+      $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
+  
+      // hide elements of author/affiliations grid that have no value
+      function hide_byline_column(caption) {
+        $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
+      }
+  
+      // affiliations
+      var have_affiliations = false;
+      for (var i = 0; i<front_matter.authors.length; ++i) {
+        var author = front_matter.authors[i];
+        if (author.affiliation !== "&nbsp;") {
+          have_affiliations = true;
+          break;
+        }
+      }
+      if (!have_affiliations)
+        $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
+  
+      // published date
+      if (!front_matter.publishedDate)
+        hide_byline_column("Published");
+  
+      // document object identifier
+      var doi = $('d-byline').find('h3:contains("DOI")');
+      var doi_p = doi.next().empty();
+      if (!front_matter.doi) {
+        // if we have a citation and valid citationText then link to that
+        if ($('#citation').length > 0 && front_matter.citationText) {
+          doi.html('Citation');
+          $('<a href="#citation"></a>')
+            .text(front_matter.citationText)
+            .appendTo(doi_p);
+        } else {
+          hide_byline_column("DOI");
+        }
+      } else {
+        $('<a></a>')
+           .attr('href', "https://doi.org/" + front_matter.doi)
+           .html(front_matter.doi)
+           .appendTo(doi_p);
+      }
+  
+       // change plural form of authors/affiliations
+      if (front_matter.authors.length === 1) {
+        var grid = $('.authors-affiliations');
+        grid.children('h3:contains("Authors")').text('Author');
+        grid.children('h3:contains("Affiliations")').text('Affiliation');
+      }
+  
+      // inject pre code styles (can't do this with a global stylesheet b/c a shadow root is used)
+      $('d-code').each(function(i, val) {
+        var style = document.createElement('style');
+        style.innerHTML = 'pre code { padding-left: 10px; font-size: 12px; border-left: 2px solid rgba(0,0,0,0.1); } ' +
+                          '@media(min-width: 768px) { pre code { padding-left: 18px; font-size: 14px; } }';
+        if (this.shadowRoot)
+          this.shadowRoot.appendChild(style);
+      });
+  
+      // move appendix-bottom entries to the bottom
+      $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
+      $('.appendix-bottom').remove();
+  
+      // clear polling timer
+      clearInterval(tid);
+  
+      // show body now that everything is ready
+      on_load_complete();
+    }
+  
+    var tid = setInterval(distill_post_process, 50);
+    distill_post_process();
+  
+  }
+  
+  function init_downlevel() {
+  
+    init_common();
+  
+     // insert hr after d-title
+    $('.d-title').after($('<hr class="section-separator"/>'));
+  
+    // check if we have authors
+    var front_matter = JSON.parse($("#distill-front-matter").html());
+    var have_authors = front_matter.authors && front_matter.authors.length > 0;
+  
+    // manage byline/border
+    if (!have_authors)
+      $('.d-byline').remove();
+    $('.d-byline').after($('<hr class="section-separator"/>'));
+    $('.d-byline a').remove();
+  
+    // remove toc
+    $('.d-toc-header').remove();
+    $('.d-toc').remove();
+    $('.d-toc-separator').remove();
+  
+    // move appendix elements
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('.d-appendix'));
+    });
+  
+  
+    // inject headers into references and footnotes
+    var refs_header = $('<h3></h3>');
+    refs_header.text('References');
+    $('#refs').prepend(refs_header);
+  
+    var footnotes_header = $('<h3></h3');
+    footnotes_header.text('Footnotes');
+    $('.footnotes').children('hr').first().replaceWith(footnotes_header);
+  
+    // move appendix-bottom entries to the bottom
+    $('.appendix-bottom').appendTo('.d-appendix').children().unwrap();
+    $('.appendix-bottom').remove();
+  
+    // remove appendix if it's empty
+    if ($('.d-appendix').children().length === 0)
+      $('.d-appendix').remove();
+  
+    // prepend separator above appendix
+    $('.d-appendix').before($('<hr class="section-separator" style="clear: both"/>'));
+  
+    // trim code
+    $('pre>code').each(function(i, val) {
+      $(this).html($.trim($(this).html()));
+    });
+  
+    // move posts-container right before article
+    $('.posts-container').insertBefore($('.d-article'));
+  
+    $('body').addClass('downlevel');
+  
+    on_load_complete();
+  }
+  
+  
+  function init_common() {
+  
+    // jquery plugin to change element types
+    (function($) {
+      $.fn.changeElementType = function(newType) {
+        var attrs = {};
+  
+        $.each(this[0].attributes, function(idx, attr) {
+          attrs[attr.nodeName] = attr.nodeValue;
+        });
+  
+        this.replaceWith(function() {
+          return $("<" + newType + "/>", attrs).append($(this).contents());
+        });
+      };
+    })(jQuery);
+  
+    // prevent underline for linked images
+    $('a > img').parent().css({'border-bottom' : 'none'});
+  
+    // mark non-body figures created by knitr chunks as 100% width
+    $('.layout-chunk').each(function(i, val) {
+      var figures = $(this).find('img, .html-widget');
+      if ($(this).attr('data-layout') !== "l-body") {
+        figures.css('width', '100%');
+      } else {
+        figures.css('max-width', '100%');
+        figures.filter("[width]").each(function(i, val) {
+          var fig = $(this);
+          fig.css('width', fig.attr('width') + 'px');
+        });
+  
+      }
+    });
+  
+    // auto-append index.html to post-preview links in file: protocol
+    // and in rstudio ide preview
+    $('.post-preview').each(function(i, val) {
+      if (window.location.protocol === "file:")
+        $(this).attr('href', $(this).attr('href') + "index.html");
+    });
+  
+    // get rid of index.html references in header
+    if (window.location.protocol !== "file:") {
+      $('.distill-site-header a[href]').each(function(i,val) {
+        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+      });
+    }
+  
+    // add class to pandoc style tables
+    $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
+    $('.kable-table').children('table').addClass('pandoc-table');
+  
+    // add figcaption style to table captions
+    $('caption').parent('table').addClass("figcaption");
+  
+    // initialize posts list
+    if (window.init_posts_list)
+      window.init_posts_list();
+  
+    // implmement disqus comment link
+    $('.disqus-comment-count').click(function() {
+      window.headroom_prevent_pin = true;
+      $('#disqus_thread').toggleClass('hidden');
+      if (!$('#disqus_thread').hasClass('hidden')) {
+        var offset = $(this).offset();
+        $(window).resize();
+        $('html, body').animate({
+          scrollTop: offset.top - 35
+        });
+      }
+    });
+  }
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    if (is_downlevel_browser())
+      init_downlevel();
+    else
+      window.addEventListener('WebComponentsReady', init_distill);
+  });
+  
+  </script>
+  
+  <!--/radix_placeholder_distill-->
+  <link href="sdd1_files/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+  <script src="sdd1_files/pagedtable-1.1/js/pagedtable.js"></script>
+  <script src="sdd1_files/jquery-1.11.3/jquery.min.js"></script>
+  <script src="sdd1_files/bowser-1.9.3/bowser.min.js"></script>
+  <script src="sdd1_files/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="sdd1_files/distill-2.2.21/template.v2.js"></script>
+  <!--radix_placeholder_site_in_header-->
+  <!--/radix_placeholder_site_in_header-->
+
+
+</head>
+
+<body>
+
+<!--radix_placeholder_front_matter-->
+
+<script id="distill-front-matter" type="text/json">
+{"title":"Increase rate of belgian population density by region between 1992 and 2019","description":"This post will explore the increase rate of the belgian population density by region between 1992 and 2019.","authors":[{"author":"Guillaume Gégo","authorURL":{},"affiliation":"&nbsp;","affiliationURL":"#"}],"publishedDate":"2020-11-16T00:00:00.000+01:00","citationText":"Gégo, 2020"}
+</script>
+
+<!--/radix_placeholder_front_matter-->
+<!--radix_placeholder_navigation_before_body-->
+<!--/radix_placeholder_navigation_before_body-->
+<!--radix_placeholder_site_before_body-->
+<!--/radix_placeholder_site_before_body-->
+
+<div class="d-title">
+<h1>Increase rate of belgian population density by region between 1992 and 2019</h1>
+<p><p>This post will explore the increase rate of the belgian population density by region between 1992 and 2019.</p></p>
+</div>
+
+<div class="d-byline">
+  Guillaume Gégo true 
+  
+<br/>11-16-2020
+</div>
+
+<div class="d-article">
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<h2 id="introduction">Introduction</h2>
+<p>This post will explore the the increase rate of belgian population density by region between 1992 and 2019.</p>
+<h2 id="data-spreadsheet-and-graph">Data spreadsheet and graph</h2>
+<div class="layout-chunk" data-layout="l-body">
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Années</th>
+<th style="text-align: center;">Région</th>
+<th style="text-align: center;">Population</th>
+<th style="text-align: center;">Densité (habitant/km^2)</th>
+<th style="text-align: center;">Taux de croissance de densité (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1992</td>
+<td style="text-align: center;">Région de Bruxelles-Capitale</td>
+<td style="text-align: center;">951217</td>
+<td style="text-align: center;">5893.53779429988</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1992</td>
+<td style="text-align: center;">Région flamande</td>
+<td style="text-align: center;">5794857</td>
+<td style="text-align: center;">425.310605504587</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1992</td>
+<td style="text-align: center;">Région wallonne</td>
+<td style="text-align: center;">3275923</td>
+<td style="text-align: center;">193.83012839477</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1993</td>
+<td style="text-align: center;">Région de Bruxelles-Capitale</td>
+<td style="text-align: center;">950339</td>
+<td style="text-align: center;">5888.09789343247</td>
+<td style="text-align: center;">-0.0923044553867387</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1993</td>
+<td style="text-align: center;">Région flamande</td>
+<td style="text-align: center;">5824628</td>
+<td style="text-align: center;">427.495633027523</td>
+<td style="text-align: center;">0.514918530013401</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1993</td>
+<td style="text-align: center;">Région wallonne</td>
+<td style="text-align: center;">3293352</td>
+<td style="text-align: center;">194.861369149754</td>
+<td style="text-align: center;">0.531393489139969</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1994</td>
+<td style="text-align: center;">Région de Bruxelles-Capitale</td>
+<td style="text-align: center;">949038</td>
+<td style="text-align: center;">5880.03717472119</td>
+<td style="text-align: center;">-0.229064365389901</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1994</td>
+<td style="text-align: center;">Région flamande</td>
+<td style="text-align: center;">5846952</td>
+<td style="text-align: center;">429.134091743119</td>
+<td style="text-align: center;">0.898168394817896</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1994</td>
+<td style="text-align: center;">Région wallonne</td>
+<td style="text-align: center;">3304351</td>
+<td style="text-align: center;">195.512159043844</td>
+<td style="text-align: center;">0.866738894907898</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1995</td>
+<td style="text-align: center;">Région de Bruxelles-Capitale</td>
+<td style="text-align: center;">951546</td>
+<td style="text-align: center;">5895.57620817844</td>
+<td style="text-align: center;">0.0346141707700289</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1995</td>
+<td style="text-align: center;">Région flamande</td>
+<td style="text-align: center;">5866057</td>
+<td style="text-align: center;">430.536293577982</td>
+<td style="text-align: center;">1.22969128400461</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1995</td>
+<td style="text-align: center;">Région wallonne</td>
+<td style="text-align: center;">3312795</td>
+<td style="text-align: center;">196.011774451216</td>
+<td style="text-align: center;">1.12469689934478</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1996</td>
+<td style="text-align: center;">Région de Bruxelles-Capitale</td>
+<td style="text-align: center;">948087</td>
+<td style="text-align: center;">5874.14498141264</td>
+<td style="text-align: center;">-0.329173976930667</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1996</td>
+<td style="text-align: center;">Région flamande</td>
+<td style="text-align: center;">5880268</td>
+<td style="text-align: center;">431.579302752294</td>
+<td style="text-align: center;">1.47421880510686</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1996</td>
+<td style="text-align: center;">Région wallonne</td>
+<td style="text-align: center;">3314421</td>
+<td style="text-align: center;">196.107981776226</td>
+<td style="text-align: center;">1.17628850023216</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1997</td>
+<td style="text-align: center;">Région de Bruxelles-Capitale</td>
+<td style="text-align: center;">950597</td>
+<td style="text-align: center;">5889.69640644362</td>
+<td style="text-align: center;">-0.0651560861553522</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1997</td>
+<td style="text-align: center;">Région flamande</td>
+<td style="text-align: center;">5898824</td>
+<td style="text-align: center;">432.941211009174</td>
+<td style="text-align: center;">1.79398556347135</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1997</td>
+<td style="text-align: center;">Région wallonne</td>
+<td style="text-align: center;">3320805</td>
+<td style="text-align: center;">196.48571090468</td>
+<td style="text-align: center;">1.37233658360419</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1998</td>
+<td style="text-align: center;">Région de Bruxelles-Capitale</td>
+<td style="text-align: center;">953175</td>
+<td style="text-align: center;">5905.66914498141</td>
+<td style="text-align: center;">0.205818574235521</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1998</td>
+<td style="text-align: center;">Région flamande</td>
+<td style="text-align: center;">5912382</td>
+<td style="text-align: center;">433.936293577982</td>
+<td style="text-align: center;">2.02910817991582</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1998</td>
+<td style="text-align: center;">Région wallonne</td>
+<td style="text-align: center;">3326707</td>
+<td style="text-align: center;">196.834921010591</td>
+<td style="text-align: center;">1.54774802662127</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1999</td>
+<td style="text-align: center;">Région de Bruxelles-Capitale</td>
+<td style="text-align: center;">954460</td>
+<td style="text-align: center;">5913.63073110285</td>
+<td style="text-align: center;">0.340881711161715</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1999</td>
+<td style="text-align: center;">Région flamande</td>
+<td style="text-align: center;">5926838</td>
+<td style="text-align: center;">434.99728440367</td>
+<td style="text-align: center;">2.27833815334697</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1999</td>
+<td style="text-align: center;">Région wallonne</td>
+<td style="text-align: center;">3332454</td>
+<td style="text-align: center;">197.174960061535</td>
+<td style="text-align: center;">1.72315946963833</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2000</td>
+<td style="text-align: center;">Région de Bruxelles-Capitale</td>
+<td style="text-align: center;">959318</td>
+<td style="text-align: center;">5943.72986369269</td>
+<td style="text-align: center;">0.851610407327338</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2000</td>
+<td style="text-align: center;">Région flamande</td>
+<td style="text-align: center;">5940251</td>
+<td style="text-align: center;">435.981724770642</td>
+<td style="text-align: center;">2.50875831746256</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2000</td>
+<td style="text-align: center;">Région wallonne</td>
+<td style="text-align: center;">3339516</td>
+<td style="text-align: center;">197.592805159458</td>
+<td style="text-align: center;">1.93984419336532</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2001</td>
+<td style="text-align: center;">Région de Bruxelles-Capitale</td>
+<td style="text-align: center;">964405</td>
+<td style="text-align: center;">5975.2478314746</td>
+<td style="text-align: center;">1.38643328118584</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2001</td>
+<td style="text-align: center;">Région flamande</td>
+<td style="text-align: center;">5952552</td>
+<td style="text-align: center;">436.884550458716</td>
+<td style="text-align: center;">2.72036867226258</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2001</td>
+<td style="text-align: center;">Région wallonne</td>
+<td style="text-align: center;">3346457</td>
+<td style="text-align: center;">198.003490917697</td>
+<td style="text-align: center;">2.15136975700355</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2002</td>
+<td style="text-align: center;">Région de Bruxelles-Capitale</td>
+<td style="text-align: center;">978384</td>
+<td style="text-align: center;">6061.85873605948</td>
+<td style="text-align: center;">2.85600844314283</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2002</td>
+<td style="text-align: center;">Région flamande</td>
+<td style="text-align: center;">5972781</td>
+<td style="text-align: center;">438.369247706422</td>
+<td style="text-align: center;">3.07070137076485</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2002</td>
+<td style="text-align: center;">Région wallonne</td>
+<td style="text-align: center;">3358560</td>
+<td style="text-align: center;">198.719602390391</td>
+<td style="text-align: center;">2.52282928339266</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2003</td>
+<td style="text-align: center;">Région de Bruxelles-Capitale</td>
+<td style="text-align: center;">992041</td>
+<td style="text-align: center;">6146.47459727385</td>
+<td style="text-align: center;">4.29164814356058</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2003</td>
+<td style="text-align: center;">Région flamande</td>
+<td style="text-align: center;">5995553</td>
+<td style="text-align: center;">440.040587155963</td>
+<td style="text-align: center;">3.46335614022713</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2003</td>
+<td style="text-align: center;">Région wallonne</td>
+<td style="text-align: center;">3368250</td>
+<td style="text-align: center;">199.29294124608</td>
+<td style="text-align: center;">2.81690140845069</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2004</td>
+<td style="text-align: center;">Région de Bruxelles-Capitale</td>
+<td style="text-align: center;">999899</td>
+<td style="text-align: center;">6195.16109045849</td>
+<td style="text-align: center;">5.11780695473349</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2004</td>
+<td style="text-align: center;">Région flamande</td>
+<td style="text-align: center;">6016024</td>
+<td style="text-align: center;">441.54304587156</td>
+<td style="text-align: center;">3.81604006489385</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2004</td>
+<td style="text-align: center;">Région wallonne</td>
+<td style="text-align: center;">3380498</td>
+<td style="text-align: center;">200.017632092776</td>
+<td style="text-align: center;">3.19352009492854</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2005</td>
+<td style="text-align: center;">Région de Bruxelles-Capitale</td>
+<td style="text-align: center;">1006749</td>
+<td style="text-align: center;">6237.60223048327</td>
+<td style="text-align: center;">5.83791744859627</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2005</td>
+<td style="text-align: center;">Région flamande</td>
+<td style="text-align: center;">6043161</td>
+<td style="text-align: center;">443.534752293578</td>
+<td style="text-align: center;">4.28393407161834</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2005</td>
+<td style="text-align: center;">Région wallonne</td>
+<td style="text-align: center;">3395942</td>
+<td style="text-align: center;">200.931424176084</td>
+<td style="text-align: center;">3.66300366300366</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2006</td>
+<td style="text-align: center;">Région de Bruxelles-Capitale</td>
+<td style="text-align: center;">1018804</td>
+<td style="text-align: center;">6312.29244114002</td>
+<td style="text-align: center;">7.10523725977935</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2006</td>
+<td style="text-align: center;">Région flamande</td>
+<td style="text-align: center;">6078600</td>
+<td style="text-align: center;">446.135779816514</td>
+<td style="text-align: center;">4.89760410053843</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2006</td>
+<td style="text-align: center;">Région wallonne</td>
+<td style="text-align: center;">3413978</td>
+<td style="text-align: center;">201.998579965682</td>
+<td style="text-align: center;">4.21503379249857</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2007</td>
+<td style="text-align: center;">Région de Bruxelles-Capitale</td>
+<td style="text-align: center;">1031215</td>
+<td style="text-align: center;">6389.18835192069</td>
+<td style="text-align: center;">8.4100557559633</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2007</td>
+<td style="text-align: center;">Région flamande</td>
+<td style="text-align: center;">6117440</td>
+<td style="text-align: center;">448.986422018349</td>
+<td style="text-align: center;">5.56770355740519</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2007</td>
+<td style="text-align: center;">Région wallonne</td>
+<td style="text-align: center;">3435879</td>
+<td style="text-align: center;">203.294420448494</td>
+<td style="text-align: center;">4.88056544394571</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2008</td>
+<td style="text-align: center;">Région de Bruxelles-Capitale</td>
+<td style="text-align: center;">1047346</td>
+<td style="text-align: center;">6489.13258983891</td>
+<td style="text-align: center;">10.1058107690794</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2008</td>
+<td style="text-align: center;">Région flamande</td>
+<td style="text-align: center;">6161438</td>
+<td style="text-align: center;">452.215633027523</td>
+<td style="text-align: center;">6.32714960852085</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2008</td>
+<td style="text-align: center;">Région wallonne</td>
+<td style="text-align: center;">3456356</td>
+<td style="text-align: center;">204.506005561801</td>
+<td style="text-align: center;">5.5099829747717</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2009</td>
+<td style="text-align: center;">Région de Bruxelles-Capitale</td>
+<td style="text-align: center;">1068532</td>
+<td style="text-align: center;">6620.39653035935</td>
+<td style="text-align: center;">12.3331647872077</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2009</td>
+<td style="text-align: center;">Région flamande</td>
+<td style="text-align: center;">6208877</td>
+<td style="text-align: center;">455.697394495413</td>
+<td style="text-align: center;">7.14537631374762</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2009</td>
+<td style="text-align: center;">Région wallonne</td>
+<td style="text-align: center;">3475671</td>
+<td style="text-align: center;">205.648837346903</td>
+<td style="text-align: center;">6.09812722488778</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2010</td>
+<td style="text-align: center;">Région de Bruxelles-Capitale</td>
+<td style="text-align: center;">1089538</td>
+<td style="text-align: center;">6750.54522924411</td>
+<td style="text-align: center;">14.541514946874</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2010</td>
+<td style="text-align: center;">Région flamande</td>
+<td style="text-align: center;">6251983</td>
+<td style="text-align: center;">458.861137614679</td>
+<td style="text-align: center;">7.88836378171217</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2010</td>
+<td style="text-align: center;">Région wallonne</td>
+<td style="text-align: center;">3498384</td>
+<td style="text-align: center;">206.992722324123</td>
+<td style="text-align: center;">6.78945467677862</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2011</td>
+<td style="text-align: center;">Région de Bruxelles-Capitale</td>
+<td style="text-align: center;">1119088</td>
+<td style="text-align: center;">6933.63073110285</td>
+<td style="text-align: center;">17.6479670961765</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2011</td>
+<td style="text-align: center;">Région flamande</td>
+<td style="text-align: center;">6306638</td>
+<td style="text-align: center;">462.872513761468</td>
+<td style="text-align: center;">8.83120547365451</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2011</td>
+<td style="text-align: center;">Région wallonne</td>
+<td style="text-align: center;">3525540</td>
+<td style="text-align: center;">208.59949115437</td>
+<td style="text-align: center;">7.62007945106536</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2012</td>
+<td style="text-align: center;">Région de Bruxelles-Capitale</td>
+<td style="text-align: center;">1138854</td>
+<td style="text-align: center;">7056.09665427509</td>
+<td style="text-align: center;">19.7260050835321</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2012</td>
+<td style="text-align: center;">Région flamande</td>
+<td style="text-align: center;">6350765</td>
+<td style="text-align: center;">466.11119266055</td>
+<td style="text-align: center;">9.59300275093461</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2012</td>
+<td style="text-align: center;">Région wallonne</td>
+<td style="text-align: center;">3546329</td>
+<td style="text-align: center;">209.829536713804</td>
+<td style="text-align: center;">8.25465614198009</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2013</td>
+<td style="text-align: center;">Région de Bruxelles-Capitale</td>
+<td style="text-align: center;">1154635</td>
+<td style="text-align: center;">7153.87236679058</td>
+<td style="text-align: center;">21.3849401208781</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2013</td>
+<td style="text-align: center;">Région flamande</td>
+<td style="text-align: center;">6381859</td>
+<td style="text-align: center;">468.393321100917</td>
+<td style="text-align: center;">10.129082316428</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2013</td>
+<td style="text-align: center;">Région wallonne</td>
+<td style="text-align: center;">3563060</td>
+<td style="text-align: center;">210.819478137388</td>
+<td style="text-align: center;">8.76541299076509</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2014</td>
+<td style="text-align: center;">Région de Bruxelles-Capitale</td>
+<td style="text-align: center;">1163486</td>
+<td style="text-align: center;">7208.71127633209</td>
+<td style="text-align: center;">22.3154504762842</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2014</td>
+<td style="text-align: center;">Région flamande</td>
+<td style="text-align: center;">6410705</td>
+<td style="text-align: center;">470.510458715596</td>
+<td style="text-align: center;">10.6275422632903</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2014</td>
+<td style="text-align: center;">Région wallonne</td>
+<td style="text-align: center;">3576325</td>
+<td style="text-align: center;">211.604342938288</td>
+<td style="text-align: center;">9.16782747768662</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2015</td>
+<td style="text-align: center;">Région de Bruxelles-Capitale</td>
+<td style="text-align: center;">1175173</td>
+<td style="text-align: center;">7281.12143742255</td>
+<td style="text-align: center;">23.5440838613126</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2015</td>
+<td style="text-align: center;">Région flamande</td>
+<td style="text-align: center;">6444127</td>
+<td style="text-align: center;">472.963449541284</td>
+<td style="text-align: center;">11.2035926735793</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2015</td>
+<td style="text-align: center;">Région wallonne</td>
+<td style="text-align: center;">3589744</td>
+<td style="text-align: center;">212.398319626058</td>
+<td style="text-align: center;">9.58056028478563</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2016</td>
+<td style="text-align: center;">Région de Bruxelles-Capitale</td>
+<td style="text-align: center;">1187890</td>
+<td style="text-align: center;">7359.91325898389</td>
+<td style="text-align: center;">24.8809713686511</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2016</td>
+<td style="text-align: center;">Région flamande</td>
+<td style="text-align: center;">6477804</td>
+<td style="text-align: center;">475.435155963303</td>
+<td style="text-align: center;">11.7866967623616</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2016</td>
+<td style="text-align: center;">Région wallonne</td>
+<td style="text-align: center;">3602216</td>
+<td style="text-align: center;">213.136264126383</td>
+<td style="text-align: center;">9.9623381313522</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2017</td>
+<td style="text-align: center;">Région de Bruxelles-Capitale</td>
+<td style="text-align: center;">1191604</td>
+<td style="text-align: center;">7382.92441140025</td>
+<td style="text-align: center;">25.2713988536601</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2017</td>
+<td style="text-align: center;">Région flamande</td>
+<td style="text-align: center;">6516011</td>
+<td style="text-align: center;">478.239339449541</td>
+<td style="text-align: center;">12.4450400884061</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2017</td>
+<td style="text-align: center;">Région wallonne</td>
+<td style="text-align: center;">3614473</td>
+<td style="text-align: center;">213.861487485948</td>
+<td style="text-align: center;">10.3337976577413</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2018</td>
+<td style="text-align: center;">Région de Bruxelles-Capitale</td>
+<td style="text-align: center;">1198726</td>
+<td style="text-align: center;">7427.05080545229</td>
+<td style="text-align: center;">26.0201848125235</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2018</td>
+<td style="text-align: center;">Région flamande</td>
+<td style="text-align: center;">6552967</td>
+<td style="text-align: center;">480.951706422018</td>
+<td style="text-align: center;">13.0822223789706</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2018</td>
+<td style="text-align: center;">Région wallonne</td>
+<td style="text-align: center;">3624377</td>
+<td style="text-align: center;">214.447488314301</td>
+<td style="text-align: center;">10.6381881029768</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2019</td>
+<td style="text-align: center;">Région de Bruxelles-Capitale</td>
+<td style="text-align: center;">1208542</td>
+<td style="text-align: center;">7487.86864931846</td>
+<td style="text-align: center;">27.052162197932</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2019</td>
+<td style="text-align: center;">Région flamande</td>
+<td style="text-align: center;">6589069</td>
+<td style="text-align: center;">483.601394495413</td>
+<td style="text-align: center;">13.7052973125485</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2019</td>
+<td style="text-align: center;">Région wallonne</td>
+<td style="text-align: center;">3633795</td>
+<td style="text-align: center;">215.004733447725</td>
+<td style="text-align: center;">10.9219419078574</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1992</td>
+<td style="text-align: center;">Belgique total</td>
+<td style="text-align: center;">10021997</td>
+<td style="text-align: center;">326.566424451758</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1993</td>
+<td style="text-align: center;">Belgique total</td>
+<td style="text-align: center;">10068319</td>
+<td style="text-align: center;">328.075825214246</td>
+<td style="text-align: center;">0.462381725204394</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1994</td>
+<td style="text-align: center;">Belgique total</td>
+<td style="text-align: center;">10100341</td>
+<td style="text-align: center;">329.119260972987</td>
+<td style="text-align: center;">0.780843310775641</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1995</td>
+<td style="text-align: center;">Belgique total</td>
+<td style="text-align: center;">10130398</td>
+<td style="text-align: center;">330.098667274919</td>
+<td style="text-align: center;">1.08093211256393</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1996</td>
+<td style="text-align: center;">Belgique total</td>
+<td style="text-align: center;">10142776</td>
+<td style="text-align: center;">330.502003975366</td>
+<td style="text-align: center;">1.20341733778363</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1997</td>
+<td style="text-align: center;">Belgique total</td>
+<td style="text-align: center;">10170226</td>
+<td style="text-align: center;">331.396461272769</td>
+<td style="text-align: center;">1.47900909452797</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1998</td>
+<td style="text-align: center;">Belgique total</td>
+<td style="text-align: center;">10192264</td>
+<td style="text-align: center;">332.114568737984</td>
+<td style="text-align: center;">1.69642036929296</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1999</td>
+<td style="text-align: center;">Belgique total</td>
+<td style="text-align: center;">10213752</td>
+<td style="text-align: center;">332.814754472286</td>
+<td style="text-align: center;">1.91076951342745</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2000</td>
+<td style="text-align: center;">Belgique total</td>
+<td style="text-align: center;">10239085</td>
+<td style="text-align: center;">333.640229398156</td>
+<td style="text-align: center;">2.16492635575833</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2001</td>
+<td style="text-align: center;">Belgique total</td>
+<td style="text-align: center;">10263414</td>
+<td style="text-align: center;">334.432989018867</td>
+<td style="text-align: center;">2.40683467556726</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2002</td>
+<td style="text-align: center;">Belgique total</td>
+<td style="text-align: center;">10309725</td>
+<td style="text-align: center;">335.942031346737</td>
+<td style="text-align: center;">2.86921640077166</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2003</td>
+<td style="text-align: center;">Belgique total</td>
+<td style="text-align: center;">10355844</td>
+<td style="text-align: center;">337.444817361269</td>
+<td style="text-align: center;">3.32853599534556</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2004</td>
+<td style="text-align: center;">Belgique total</td>
+<td style="text-align: center;">10396421</td>
+<td style="text-align: center;">338.767017498126</td>
+<td style="text-align: center;">3.73579936920109</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2005</td>
+<td style="text-align: center;">Belgique total</td>
+<td style="text-align: center;">10445852</td>
+<td style="text-align: center;">340.377724917723</td>
+<td style="text-align: center;">4.22880240071042</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2006</td>
+<td style="text-align: center;">Belgique total</td>
+<td style="text-align: center;">10511382</td>
+<td style="text-align: center;">342.513017693636</td>
+<td style="text-align: center;">4.88103622500536</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2007</td>
+<td style="text-align: center;">Belgique total</td>
+<td style="text-align: center;">10584534</td>
+<td style="text-align: center;">344.896673075043</td>
+<td style="text-align: center;">5.61288544569311</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2008</td>
+<td style="text-align: center;">Belgique total</td>
+<td style="text-align: center;">10665140</td>
+<td style="text-align: center;">347.523216787774</td>
+<td style="text-align: center;">6.4151636708822</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2009</td>
+<td style="text-align: center;">Belgique total</td>
+<td style="text-align: center;">10753080</td>
+<td style="text-align: center;">350.388738635993</td>
+<td style="text-align: center;">7.2939951618336</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2010</td>
+<td style="text-align: center;">Belgique total</td>
+<td style="text-align: center;">10839905</td>
+<td style="text-align: center;">353.217928247906</td>
+<td style="text-align: center;">8.16057813026305</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2011</td>
+<td style="text-align: center;">Belgique total</td>
+<td style="text-align: center;">10951266</td>
+<td style="text-align: center;">356.846622568347</td>
+<td style="text-align: center;">9.2721315491319</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2012</td>
+<td style="text-align: center;">Belgique total</td>
+<td style="text-align: center;">11035948</td>
+<td style="text-align: center;">359.605982599629</td>
+<td style="text-align: center;">10.1172796031479</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2013</td>
+<td style="text-align: center;">Belgique total</td>
+<td style="text-align: center;">11099554</td>
+<td style="text-align: center;">361.67858190231</td>
+<td style="text-align: center;">10.7511406436599</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2014</td>
+<td style="text-align: center;">Belgique total</td>
+<td style="text-align: center;">11150516</td>
+<td style="text-align: center;">363.339176903777</td>
+<td style="text-align: center;">11.2594543283216</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2015</td>
+<td style="text-align: center;">Belgique total</td>
+<td style="text-align: center;">11209044</td>
+<td style="text-align: center;">365.24630975268</td>
+<td style="text-align: center;">11.8443212787458</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2016</td>
+<td style="text-align: center;">Belgique total</td>
+<td style="text-align: center;">11267910</td>
+<td style="text-align: center;">367.164456319854</td>
+<td style="text-align: center;">12.4291882291699</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2017</td>
+<td style="text-align: center;">Belgique total</td>
+<td style="text-align: center;">11322088</td>
+<td style="text-align: center;">368.929844569716</td>
+<td style="text-align: center;">12.9711853507671</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2018</td>
+<td style="text-align: center;">Belgique total</td>
+<td style="text-align: center;">11376070</td>
+<td style="text-align: center;">370.688846166379</td>
+<td style="text-align: center;">13.5101203417338</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2019</td>
+<td style="text-align: center;">Belgique total</td>
+<td style="text-align: center;">11431406</td>
+<td style="text-align: center;">372.491967806054</td>
+<td style="text-align: center;">14.0613038552225</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="sdd1_files/figure-html5/unnamed-chunk-3-1.png" width="624" /></p>
+</div>
+<h2 id="analysis">Analysis</h2>
+<p>Multiple important analysis can be made about this graph:</p>
+<ul>
+<li>Urbanisation is on the rise. Huge cities such as Brussels are undergoing a steep increase in their population density.</li>
+<li>The average increase rate of the belgian population density corresponds to the increase rate of the flemish population density.</li>
+<li>Wallonia’s rate is decreasing due to massive urbanisation. A plateau is expected to be reached soon.</li>
+</ul>
+<!--radix_placeholder_article_footer-->
+<!--/radix_placeholder_article_footer-->
+</div>
+
+<div class="d-appendix">
+</div>
+
+
+<!--radix_placeholder_site_after_body-->
+<!--/radix_placeholder_site_after_body-->
+<!--radix_placeholder_appendices-->
+<div class="appendix-bottom"></div>
+<!--/radix_placeholder_appendices-->
+<!--radix_placeholder_navigation_after_body-->
+<!--/radix_placeholder_navigation_after_body-->
+
+</body>
+
+</html>

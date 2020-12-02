@@ -1,14 +1,29 @@
 [
   {
+    "path": "posts/2020-11-14-sdd1/",
+    "title": "Data analysis of ",
+    "description": "Humankind's next giant step may be onto Mars. But before those missions can begin, scientists need to make scores of breakthrough advances, including learning how to grow crops on the red planet.",
+    "author": [
+      {
+        "name": "Guillaume Gégo",
+        "url": {}
+      }
+    ],
+    "date": "2020-11-14",
+    "categories": [
+      "Data Science 1"
+    ],
+    "preview": {},
+    "last_modified": "2020-11-14T14:53:47+01:00"
+  },
+  {
     "path": "posts/2020-10-28-spacebiology1/",
     "title": "Geologists simulate soil conditions to help grow plants on Mars",
     "description": "Humankind's next giant step may be onto Mars. But before those missions can begin, scientists need to make scores of breakthrough advances, including learning how to grow crops on the red planet.",
     "author": [
       {
         "name": "Guillaume Gégo",
-        "url": {
-          "https://guillaume-gego.github.io/Guillaume-Gego_blog/": {}
-        }
+        "url": {}
       }
     ],
     "date": "2020-10-27",
@@ -17,7 +32,7 @@
       "Science 4U"
     ],
     "preview": "posts/2020-10-28-spacebiology1/SpaceBiology1.jpg",
-    "last_modified": "2020-10-29T01:05:51+01:00"
+    "last_modified": "2020-11-14T14:53:16+01:00"
   },
   {
     "path": "posts/2020-10-10-amazing-nudibranchs/",

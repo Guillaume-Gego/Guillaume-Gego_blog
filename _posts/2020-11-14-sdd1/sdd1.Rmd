@@ -1,0 +1,247 @@
+---
+title: "Increase rate of belgian population density by region between 1992 and 2019"
+description: |
+  This post will explore the increase rate of the belgian population density by region between 1992 and 2019.
+author:
+  - name: Guillaume Gégo
+    url: {}
+date: 11-16-2020
+categories:
+  - "Demography"
+  - "Data Science 1"
+preview: SpaceBiology1.jpg
+output:
+  distill::distill_article:
+    self_contained: false
+---
+  
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+#Importation des données
+
+SciViews::R
+
+bx <- read$rds("data/region_bxl_av_2000.rds")
+
+bx2 <- read$rds("data/region_bxl_ap_2000.rds")
+
+rw <- read$csv("data/region_wallonne_av_2000.csv")
+
+rw2 <- read$csv("data/region_wallonne_ap_2000.csv")
+
+rf <- read$xls("data/region_flamande_av_2000.xls")
+
+rf2 <- read$xls("data/region_flamande_ap_2000.xls")
+
+#Transformation des données
+
+bruxelles <- full_join(bx, bx2) 
+
+wallonie <- full_join(rw, rw2)
+
+flandre <- full_join(rf, rf2)
+
+#Assemblage des différents tableaux
+
+belgique1 <- bind_rows(bruxelles, wallonie, flandre)
+
+belgique <- pivot_longer(belgique1, cols = c(population_au_01_janvier_1992 : population_au_01_janvier_2019), names_to = "années", values_to = "population")
+rmarkdown::paged_table(belgique)
+
+write$rds(belgique, file = "data/belgique.rds")
+
+# Import du DF
+belgique <- read$rds("data/belgique.rds")
+  
+belgique -> belgique1
+  
+# On remplace population_au_01_janvier_ par du rien
+str_replace(belgique1$années, "population_au_01_janvier_", "") -> Pannées
+  
+# On renomme les colonnes et on remplace année par Purification années (Pannées)
+belgique1 %>.%
+  select(., - c(années)) %>.%
+  mutate(., Pannées = c(Pannées)) -> belgique_clean
+  
+names(belgique_clean) <- c("tranches", "region", "sexe", "nationalite", "population", "annees")
+
+# Conversions spéciales
+belgique_clean$tranches <- ordered(belgique_clean$tranches, levels = c("Moins de 18 ans", "De 18 à 64 ans", "65 ans et plus"))
+```
+  
+```{r}
+# Création de jeu de donnée attirés pour la population par année en Wallonie
+belgique_clean %>.%
+  filter(., region %in% c("Région wallonne")) %>.%
+  group_by(., annees) %>.%
+  summarise(., "poptot_w" = sum(population)) -> belgique_w
+  
+# Création de jeu de donnée attirés pour la population par année en Flandre
+belgique_clean %>.%
+  filter(., region %in% c("Région flamande")) %>.%
+  group_by(., annees) %>.%
+  summarise(., "poptot_f" = sum(population)) -> belgique_f
+  
+# Création de jeu de donnée attirés pour la population par année en région de bruxelles capitale
+belgique_clean %>.%
+  filter(., region %in% c("Région de Bruxelles-Capitale")) %>.%
+  group_by(., annees) %>.%
+  summarise(., "poptot_bc" = sum(population)) -> belgique_bc
+  
+# Création de jeu de donnée attirés pour la population par année en Belgique
+belgique_clean %>.%
+  group_by(., annees) %>.%
+  summarise(., "poptot" = sum(population), superf_b = 30689)-> belgique_poptot_sup
+
+  
+# Initialisation de variables
+superf_b = 30689
+superf_f = 13625
+superf_w = 16901
+superf_bc = 161.4
+  
+
+# Création de jeu de donnée attirés pour le pourcentage d'augmentation densité de population par région au cours du temps
+belgique_w %>.%
+  mutate(., "densite_w" = (poptot_w/superf_w)) %>.%
+  select(., - poptot_w) -> bel_w_dense
+
+belgique_f %>.%
+  mutate(., "densite_f" = (poptot_f/superf_f)) %>.%
+  select(., - poptot_f) -> bel_f_dense
+
+belgique_bc %>.%
+  mutate(., "densite_bc" = (poptot_bc/superf_bc)) %>.%
+  select(., - poptot_bc) -> bel_bc_dense
+
+belgique_poptot_sup %>.%
+  mutate(., "densite_b" = (poptot/superf_b), "region" = "Belgique total") -> bel_dense
+
+# V2 
+belgique_clean %>.%
+  group_by(., annees, region) %>.%
+  summarise(., "poptot" = sum(population)) -> belgique_regan
+
+belgique_regan %>.%
+  filter(., region %in% c("Région flamande")) %>.%
+  mutate(., "densite_f" = (poptot/superf_f)) -> belgique_f_dense
+
+belgique_regan %>.%
+  filter(., region %in% c("Région wallonne")) %>.%
+  mutate(., "densite_w" = (poptot/superf_w)) -> belgique_w_dense
+
+belgique_regan %>.%
+  filter(., region %in% c("Région de Bruxelles-Capitale")) %>.%
+  mutate(., "densite_bc" = (poptot/superf_bc)) -> belgique_bc_dense
+
+belgique_poptot_sup %>.%
+  mutate(., "densite_b" = (poptot/superf_b), "region" = "Belgique total") -> bel_dense
+  
+bel_d1 <- full_join(belgique_regan, belgique_f_dense, by = c("poptot", "region", "annees"))
+  
+bel_d2 <- full_join(bel_d1, belgique_w_dense, by = c("poptot", "region", "annees"))
+  
+bel_d3 <- full_join(bel_d2, belgique_bc_dense, by = c("poptot", "region", "annees"))
+  
+belgique_densite <- full_join(bel_d3, bel_dense, by = c("poptot", "region", "annees"))
+
+belgique_densite %>.%
+  mutate(., 
+    densite_f2 = str_replace_na(densite_f,replacement = ""),
+    densite_w2 = str_replace_na(densite_w,replacement = ""),
+    densite_bc2 = str_replace_na(densite_bc,replacement = ""),
+    densite_b2 = str_replace_na(densite_b,replacement = "")
+  ) %>%
+  mutate(
+    densite = str_c(densite_f2, densite_w2, densite_bc2, densite_b2)
+  ) -> belgique_densite_clean
+
+belgique_densite_clean <- select(belgique_densite_clean, - c("densite_f", "densite_w", "densite_bc", "densite_b", "densite_f2", "densite_w2", "densite_bc2", "densite_b2", "superf_b"))
+
+# V3
+belgique_bc_dense %>.%
+  select(., - poptot) %>.%
+  mutate(., per_densite_bc = ((round(densite_bc, digits = 2) - 5893.54)/5893.54) * 100) -> belgique_per_densite_bc
+  
+belgique_w_dense %>.%
+  select(., - poptot) %>.%
+  mutate(., per_densite_w = ((round(densite_w, digits = 2) - 193.83)/193.83) * 100) -> belgique_per_densite_w
+  
+belgique_f_dense %>.%
+  select(., - poptot) %>.%
+  mutate(., per_densite_f = ((round(densite_f, digits = 2) - 425.31)/425.31) * 100) -> belgique_per_densite_f
+  
+bel_dense %>.%
+  mutate(., per_densite_b = ((round(densite_b, digits = 2) - 326.57)/326.57) * 100) -> belgique_per_densite_b
+
+per_bel_d1 <- full_join(belgique_regan, belgique_per_densite_bc, by = c("region", "annees"))
+  
+per_bel_d2 <- full_join(per_bel_d1, belgique_per_densite_w, by = c("region", "annees"))
+  
+per_bel_d3 <- full_join(per_bel_d2, belgique_per_densite_f, by = c("region", "annees"))
+
+belgique_per_densite <- full_join(per_bel_d3, belgique_per_densite_b, by = c("region", "poptot", "annees"))
+
+belgique_per_densite %>.%
+  mutate(., 
+    per_densite_f2 = str_replace_na(per_densite_f,replacement = ""),
+    per_densite_w2 = str_replace_na(per_densite_w,replacement = ""),
+    per_densite_bc2 = str_replace_na(per_densite_bc,replacement = ""),
+    per_densite_b2 = str_replace_na(per_densite_b,replacement = "")
+  ) %>%
+  mutate(
+    per_densite = str_c(per_densite_f2, per_densite_w2, per_densite_bc2, per_densite_b2)
+  ) -> belgique_per_densite_clean
+
+belgique_per_densite_clean <- select(belgique_per_densite_clean, - c("densite_bc", "per_densite_bc", "densite_w", "per_densite_w", "densite_f", "per_densite_f", "per_densite_f2", "per_densite_w2", "per_densite_bc2", "superf_b", "densite_b", "per_densite_b", "per_densite_b2"))
+
+# Finish joint
+belgique_densite_all <- full_join(belgique_densite_clean, belgique_per_densite_clean, by = c("region", "annees", "poptot"))
+```
+  
+## Introduction
+This post will explore the the increase rate of belgian population density by region between 1992 and 2019.
+  
+## Data spreadsheet and graph
+```{r}
+# Kable
+options(knitr.table.format = NULL)
+knitr::kable(belgique_densite_all, col.names = c("Années", "Région", "Population", "Densité (habitant/km^2)", "Taux de croissance de densité (%)"), align = "ccccc")
+```
+
+```{r}
+chart(belgique_densite_all, as.numeric(per_densite) ~ as.numeric(annees) %col=% region) +
+  geom_point() +
+  geom_line() +
+  theme(legend.position = "top", legend.text = element_text(size = 10), legend.justification = "center") +
+  labs(y = "Increase rate of [habitant/km^2]", x = "Years", col = "", title = "Increase rate of belgian population density by region between 1992 - 2019")
+```
+  
+## Analysis
+Multiple important analysis can be made about this graph:
+  
+* Urbanisation is on the rise. Huge cities such as Brussels are undergoing a steep increase in their population density.
+* The average increase rate of the belgian population density corresponds to the increase rate of the flemish population density.
+* Wallonia's rate is decreasing due to massive urbanisation. A plateau is expected to be reached soon.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

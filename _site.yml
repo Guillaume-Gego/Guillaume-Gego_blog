@@ -1,6 +1,7 @@
 name: "Guillaume-Gego_blog"
 title: "AstroBio Blog"
 favicon: astronaut_avatar.png
+output_dir: "docs"
 navbar:
   search: TRUE
   logo:
@@ -19,6 +20,8 @@ navbar:
           href: "posts/meal/index.html"
         - text: "Science 4U"
           href: blog-posts.html
+        - text: "Data Science exercices"
+          href: SDD-exos.html
     - image: Moodle_logo.png
       href: https://moodle.umons.ac.be/
     - icon: fab fa-github

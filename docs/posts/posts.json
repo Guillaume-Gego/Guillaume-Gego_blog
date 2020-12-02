@@ -1,14 +1,32 @@
 [
   {
+    "path": "posts/2020-11-14-sdd1/",
+    "title": "Increase rate of belgian population density by region between 1992 and 2019",
+    "description": "This post will explore the increase rate of the belgian population density by region between 1992 and 2019.",
+    "author": [
+      {
+        "name": "Guillaume Gégo",
+        "url": {}
+      }
+    ],
+    "date": "2020-11-16",
+    "categories": [
+      "Demography",
+      "Data Science 1"
+    ],
+    "preview": "posts/2020-11-14-sdd1/sdd1_files/figure-html5/unnamed-chunk-3-1.png",
+    "last_modified": "2020-12-02T23:47:10+01:00",
+    "preview_width": 1248,
+    "preview_height": 768
+  },
+  {
     "path": "posts/2020-10-28-spacebiology1/",
     "title": "Geologists simulate soil conditions to help grow plants on Mars",
     "description": "Humankind's next giant step may be onto Mars. But before those missions can begin, scientists need to make scores of breakthrough advances, including learning how to grow crops on the red planet.",
     "author": [
       {
         "name": "Guillaume Gégo",
-        "url": {
-          "https://guillaume-gego.github.io/Guillaume-Gego_blog/": {}
-        }
+        "url": {}
       }
     ],
     "date": "2020-10-27",
@@ -17,7 +35,7 @@
       "Science 4U"
     ],
     "preview": "posts/2020-10-28-spacebiology1/SpaceBiology1.jpg",
-    "last_modified": "2020-10-29T01:05:51+01:00"
+    "last_modified": "2020-11-14T14:53:17+01:00"
   },
   {
     "path": "posts/2020-10-10-amazing-nudibranchs/",
