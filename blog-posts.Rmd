@@ -5,8 +5,100 @@ listing:
   posts:
     - 2020-10-10-amazing-nudibranchs
     - 2020-10-28-spacebiology1
+    - 2020-12-04-spacebiology2
 ---
-
+# What is Astrobiology?
+Astrobiology is a field of research regrouping a vast array of scientific and engineering disciplines that fundamentally seeks to understand the origin life and all its developments/interaction with the universe.
+  
+It tries to provide humankind with biological, philosophical and practical understanding of the core concepts of our place as a species in the infinite complexity of our reality.
+  
+Throughout this blog, you will come across several categories linked to a special Astrobiology-related field. A lot of them will be related to Mars though!
+  
+Here are some current research topics for each of these categories along with a short description of the discipline:
+  
+## Ecology and Astronomy:
+  
+Ecology is "the branch of biology that deals with the relations of organisms to one another and to their physical surroundings" (Oxford Languages, 4th dec 2020).
+  
+The branch of ecology related to astrobiology explores the possibilities we have to protect us from potentially harmful exo-planetary biospheres and life-forms, as well as how to preserve those otherworldly occurrences of life. But how exactly can we:
+  
+* Sterilize spacecraft so as to prevent the contamination of other worlds with terrestrial life forms?
+* Return samples from other worlds in a manner that adequately reduces the risk of accident while maintaining the integrity of the sample?
+* Send humans to other worlds (such as Mars) without contaminating those worlds? Can spacesuits be designed so as to not  contaminate a planet's surface
+  
+As a sentient species, we ought to protect the endless wonders that life birthed in the universe.. But we also need to explore these extrasolar planet and evaluate their biological potential in order to better understand how life was created. But here are things to consider:
+  
+* What do we look for when we try to ascertain where a planet supports life? 
+* Can planetary phenomena indicative of life be detected across interstellar distances? 
+* Can planets - and the conditions for life arise in multiple star systems?
+* Are there features a technological race leaves that can be detected across interstellar distances? Dyson spheres? Gamma ray bursts from starships? Are we alone?
+  
+Answers to some of those questions will be furnished if pertinent scientific articles covering their topic are released.
+  
+## Geology:
+  
+Geology is "the the science which deals with the physical structure and substance of the earth, their history, and the processes which act on them." (Oxford Languages, 4th dec 2020).
+  
+A plethora of scientific experimentation will have to be conducted upon landing on other planets, but some of them include complex regolith analysis, soil experimentation, tectonic plates movements and volcanic activities mesuraments, historic retracing of the physical structure of the planet and so on.. But some questions arise, such as:
+  
+* Is the regolith of the explored planet usable as a substitution substrate for plant growth?
+* What role does the constant influx of materials (due to geological activities) play in a planet's ecosystem? 
+* Can small collections of biogenic materials be concentrated in special geologic formation on otherwise abiotic worlds (such as the poles of Earth's moon)?
+* Does the crust of the planet contain water in any shape or form?
+  
+## Space engineering and Astrobiology:
+  
+Space engineering is "the branch of science and technology concerned with the design, building, and use of engines, machines, and structures" (Oxford Languages, 4th dec 2020), but applied to spaceborne equipment and (bio-)technologies.
+  
+This one is a personnal favourite. I've always been drawn to how complex machinery works, and I plan to complement my biological cursus with a space engineering program. The study of Life Support Systems (L.S.S.) will be a huge part of this blog. Here are some very highly advanced research topics in the field:
+  
+* What will it take for terrestrial life to survive and adapt to environments in space and on other planets (MELiSSA project, V.E.G.G.I.E., etc.)?
+* How do you grow plants in extra-terretrial environments?
+  What sort of countermeasures will we need to develop to deal with the debilitating effects of microgravity and space radiation?
+* Can humans and other life forms readapt to life on Earth after adapting to live in microgravity or in the lower gravitational fields on the Moon and Mars?
+* Can life forms be modified to better function in extraterrestrial environments?
+* Can we possibly terraform other worlds?
+* Literally how can we become an interstellar species?
+  
+I don't know if you can tell but this hypes me SO MUCH!
+  
+## Biochemistry and molecular biology:
+  
+Biochemistry is "the branch of science concerned with the chemical and physico-chemical processes and substances that occur within living organisms." (Oxford Languages, 4th dec 2020). 
+  
+Applied to space research, this branch is so vast that it's nearly impossible to list all the possible fields it appeals to. Essentially, it explores:
+  
+* How are the raw ingredients of life formed, distributed, and recycled in the universe? 
+* How are those raw ingredients dispatched in individuals, how do then interact with each other and how does life gets shaped by all those interactions?
+* How prevalent are so called "organic compounds" across the universe?
+* Are there other compounds that might be indicative of life? 
+* How are these materials organized and concentrated such that life can form? 
+* What is the smallest, most fundamental level at which life perceives and responds to gravity?
+* How do you get from simple chemistry to self-replicating life forms?
+* How can we replicate what mother Nature created in order to use it as a technology to better our chances of expansion in the universe?
+  
+Here are some other fields of research that might be covered, but are less predominant in my priorities.
+  
+## Physiology:
+  
+* Muscle and Bone: what happens when weight-bearing structures no longer have weight to bear?
+* Nervous systems: how did Earth affect their development - and how will they respond to the space environment?
+  
+## Philosophy:
+  
+* Why are we so interested in leaving Earth to explore the universe?
+* How will human culture adapt and evolve in extraterrestrial environments?
+* How do we search for - and communicate with - extraterrestrial forms of intelligence? Should we communicate at all?
+* How do we decide whether or not it is safe an ethically acceptable to terraform a planet?
+* Who does space belong to? Can it belong to anyone?
+* What's our purpose ? (pass butter?)
+  
+# FAQ:
+  
+## Why is there a nudibranch article in here?
+  
+Cause they're, like, the cutest thing ever what do you EVEN mean?! 
+  
 ```{r, echo = FALSE, eval = FALSE}
 #distill::create_post("my post") # use this fonction to create a new post
 ```

@@ -1,0 +1,61 @@
+---
+title: "Astronauts Harvest First Radish Crop on International Space Station"
+description: |
+  On Nov. 30, 2020, NASA astronaut Kate Rubins harvested radish plants growing in the Advanced Plant Habitat (APH) aboard the International Space Station.
+author:
+  - name: Guillaume Gégo
+    url: {}
+date: 12-04-2020
+categories:
+  - "Astrobiology"
+  - "Space engineering"
+  - "Science 4U"
+preview: Radish_Harvest.jpg
+output:
+  distill::distill_article:
+    self_contained: false
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+  
+# Astronauts Harvest First Radish Crop on International Space Station
+  
+![On Nov. 27, 2020, NASA astronaut and Expedition 64 Flight Engineer Kate Rubins checks out radish plants growing for the Plant Habitat-02 experiment that seeks to optimize plant growth in the unique environment of space and evaluate nutrition and taste of the plants. **Credits: NASA**](Radish_Harvest.jpg)
+  
+## Informations about the article
+**Source of the article:** [NASA's John F. Kennedy Space Center](https://www.nasa.gov/feature/astronauts-harvest-first-radish-crop-on-international-space-station)
+  
+**Word count:** 775
+  
+## Vocabulary
+  
+| Word from the text | Synonym/definition in English | French translation |
+|--------------------|-------------------------------|--------------------|
+| A cabbage          | A cousin of cauliflower       | Un chou            |
+| Radishes           | /                             | Des radis          |
+| Dwarf              | Gimli-sized                   | Nain (petit)       |
+| To thrive          | To develop/prosper            | Prospérer/survivre |
+| Clay               | /                             | Argile             |
+| Moisture           | Humidity                      | Humidité           |
+| Weightlessness     | /                             | Apesanteur         |
+| Payload            | Charge                        | Charge utile       |
+| To tweak           | To modify                     | Ajuster            |
+  
+## Analysis table about the study
+  
+| Researchers?         | Karl Hasenstein, University of Louisiana at Lafayette.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+|----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Published in? When?  | NASA.gov website, 2nd of December 2020.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| General topic        | Harvest of radishes from the Advanced Plant Habitat (APH) in the ISS (International Space Station).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| Study                | As part of the Plant Habitat-02 (PH-02) program aboard the ISS, NASA astronaut Kate Rubins successfully harvested 20 plants of radishes from the APH after a growth period of 27 days in microgravity. After successfully growing dwarf wheat and leafy greens such as lettuce, Radishes have been selected to be grown in space due to their role of model plants, while also being very nutritious and edible as well as genetically similar to a species of "cabbage" previously grown in the APH (Arabidopsis). Plant life support systems such as LED lights for photosynthesis, nutrient and water irrigation system, air filtration systems and 180 biomonitoring sensors were used to make sure the radishes thrived in optimal conditions.  |
+| Conclusion           | This study and technical achievement will pave the way to better and more sophisticated extra-terrestrial microgravity plant growth systems. It's a new stepping stone towards further exploration to other worlds, such as Mars.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Further developments | This experiment will be repeated once to increase the sample size and thus improve scientific accuracy. “The APH has two science carriers, so shortly after the first harvest, the second carrier will be used to repeat the experiment by planting another set of radish seeds.”                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+  
+# To go further
+  
+* [Veggie fact sheet](https://www.nasa.gov/sites/default/files/atoms/files/veggie_fact_sheet_508.pdf)
+
+* Stop motion of the radish growth:
+  
+[![Radishes Growing in Space: 27 Days in 10 Seconds](http://img.youtube.com/vi/UT0K3GmNV7E/0.jpg)](https://www.youtube.com/watch?v=UT0K3GmNV7E "Radishes Growing in Space: 27 Days in 10 Seconds")

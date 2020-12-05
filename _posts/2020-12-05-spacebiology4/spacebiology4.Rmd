@@ -1,0 +1,58 @@
+---
+title: "Mitochondrial Changes Key to Health Problems in Space"
+description: |
+  A team of scientists has now identified a possible underlying driver of space-related health impacts: the changes experienced by the powerhouse of the cell, or mitochondria, during spaceflight.
+author:
+  - name: Guillaume Gégo
+    url: {}
+date: 12-05-2020
+categories:
+  - "Physiology"
+  - "Astrobiology"
+  - "Science 4U"
+preview: Mooi.jpg
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Microbes To Demonstrate Biomining Of Asteroid Material Aboard The Space Station
+  
+Space isn't safe, that's just common sense. But what really happens to our body is somtimes still foggy, as physiologists keep scratching their heads on data collected over the space of over a decade. But one team of brilliant scientists might have found the origin of all those potentially harmful structural changes: the changes that the mitochondrion experiences during spaceflight. They analyzed data sample from around 59 astronauts, including some rodents such as a couple of mice and NASA's astronaut Scott Kelly who has a twin on earth. 
+  
+![On earth, we can study and simulate space hazards as shown on the diagram above. "Collectively, these experiments and analyses reveal significant recurrent molecular and cellular features of spaceflight including DNA damage, oxidative stress, mitochondrial dysregulation, microbiome shifts, epigenetic changes, and telomere length dynamics." **Credits:  NASA**](mito.jpg)
+  
+## Informations about the article
+**Source of the article:** [NASA](https://www.nasa.gov/feature/ames/mitochondria-cell-science)
+  
+**Word count:** 583
+  
+## Vocabulary
+  
+| Word from the text       | Synonym/definition in English       | French translation           |
+|--------------------------|-------------------------------------|------------------------------|
+| Harsh                    | Hard to thrive in/rough/unwelcoming | Rude/dur/inhospitalier       |
+| The powerhouse           | The place where power gets produced | La centrale énergétique      |
+| To be thrown out of wack | To be flipped upside down           | Être sans dessus-dessous     |
+| To tackle                | To deal with/confront               | S'occuper de/confronter      |
+
+** Extra definition:** A circadian rhythm is a natural, internal process that regulates the sleep-wake cycle and repeats on each rotation of the Earth roughly every 24 hours. 
+  
+## Analysis table about the study
+  
+| Researchers?         | Afshin Beheshti, researcher with KBR, collaborating with NASA's Ames Research Center                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+|----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Published in? When?  | NASA.gov, 25 Nov. 2020.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| General topic        | Major discovery in mitochondrion changes during spaceflights                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Study                | Using data collected over decades of experimental research aboard the ISS, a team of scientists discovered that there are significant mitochondria alterations between space and earth twins (mice or Scott/Mark Kelly) as well as modifications on all 59 astronaut crew members studied before and after their mission. The GeneLab open-source platform at Ames drew in scientists from all around the globe to crunch the data and make an unprecedented discovery: Space travel causes mitochondrial dysfunction. The reason why mitochondria are affected is still hazy (although it's probably due to microgravity), but the study sheds light and connected the dots to reveal that many post space-travel pathologies are linked to this mitochondrial dysfunction. It was first demonstrated with mice "When we started comparing the tissues from mice flown on separate space missions, we noticed that mitochondrial dysfunction kept popping up". It was then backed up by NASA's twin studies between Mark and Scott Kelly, and finally "Blood and urine samples from dozens of other astronauts showed further evidence that, in various types of cells, being in space led to altered mitochondrial activity."   |
+| Conclusion           | Spaceflight modifies mitochondrial structure and causes cell power dysfunction. But as Beheshti himself declared: "the good news is, this is a problem we can already start to tackle. We can look at countermeasures and drugs we already use to deal with mitochondrial disorders on Earth to see how they might work in space, to start". This study will thus allow to better tackle how to explore our universe by adapting our earthling bodies to visit a plethora of heavenly bodies.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Further developments | As previously said, drugs can be developed to tackle this issue!                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+  
+# To go further
+  
+* **Publication in Cell:** [link](https://www.cell.com/cell/fulltext/S0092-8674(20)31461-6?from=article_link)
+
