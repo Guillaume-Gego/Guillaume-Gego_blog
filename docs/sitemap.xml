@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
   <url>
     <loc>http://Guillaume-Gego.github.io/Guillaume-Gego_blog/blog-posts.html</loc>
-    <lastmod>2020-12-05T12:46:40+01:00</lastmod>
+    <lastmod>2020-12-05T15:02:54+01:00</lastmod>
   </url>
   <url>
     <loc>http://Guillaume-Gego.github.io/Guillaume-Gego_blog/custom.html</loc>
@@ -21,12 +21,16 @@
     <lastmod>2020-10-12T12:55:10+02:00</lastmod>
   </url>
   <url>
+    <loc>http://Guillaume-Gego.github.io/Guillaume-Gego_blog/posts/2020-12-05-spacebiology4/</loc>
+    <lastmod>2020-12-05T15:03:23+01:00</lastmod>
+  </url>
+  <url>
     <loc>http://Guillaume-Gego.github.io/Guillaume-Gego_blog/posts/2020-12-04-spacebiology2/</loc>
-    <lastmod>2020-12-04T22:52:26+01:00</lastmod>
+    <lastmod>2020-12-05T15:03:13+01:00</lastmod>
   </url>
   <url>
     <loc>http://Guillaume-Gego.github.io/Guillaume-Gego_blog/posts/2020-12-04-spacebiology3/</loc>
-    <lastmod>2020-12-05T01:27:28+01:00</lastmod>
+    <lastmod>2020-12-05T15:03:07+01:00</lastmod>
   </url>
   <url>
     <loc>http://Guillaume-Gego.github.io/Guillaume-Gego_blog/posts/2020-11-14-sdd1/</loc>
@@ -34,7 +38,7 @@
   </url>
   <url>
     <loc>http://Guillaume-Gego.github.io/Guillaume-Gego_blog/posts/2020-10-28-spacebiology1/</loc>
-    <lastmod>2020-12-04T19:03:11+01:00</lastmod>
+    <lastmod>2020-12-05T15:03:47+01:00</lastmod>
   </url>
   <url>
     <loc>http://Guillaume-Gego.github.io/Guillaume-Gego_blog/posts/2020-10-10-amazing-nudibranchs/</loc>
