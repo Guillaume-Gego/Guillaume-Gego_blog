@@ -1,5 +1,42 @@
 [
   {
+    "path": "posts/2021-08-03-spacebiology6/",
+    "title": "Seed Film Brings New Way to Grow Plants in Space",
+    "description": "NASA sent seed films - a novel seed handling material - containing red romaine lettuce seeds as part of the VEG-03J experiment to the International Space Station on Feb. 15, 2020, and NASA astronaut Michael Hopkins planted the lettuce on Jan. 4, 2021.",
+    "author": [
+      {
+        "name": "Guillaume Gégo",
+        "url": {}
+      }
+    ],
+    "date": "2021-03-09",
+    "categories": [
+      "Astrobiology",
+      "Science 4U"
+    ],
+    "preview": "posts/2021-08-03-spacebiology6/seed_film.jpg",
+    "last_modified": "2021-03-09T14:35:13+01:00"
+  },
+  {
+    "path": "posts/2021-08-03-spacebiology7/",
+    "title": "Spiders in space: without gravity, light becomes key to orientation",
+    "description": "Humans have taken spiders into space more than once to study the importance of gravity to their web-building. A recent study about the 2011 experiment has yielded the surprising insight that light plays a larger role in arachnid orientation than previously thought.",
+    "author": [
+      {
+        "name": "Guillaume Gégo",
+        "url": {}
+      }
+    ],
+    "date": "2021-03-09",
+    "categories": [
+      "Ecology",
+      "Astrobiology",
+      "Science 4U"
+    ],
+    "preview": "posts/2021-08-03-spacebiology7/Spider_in_space.jpg",
+    "last_modified": "2021-03-09T14:35:18+01:00"
+  },
+  {
     "path": "posts/2021-08-03-spacebiology5/",
     "title": "Microgravity Works Wonders With Plant Transplants",
     "description": "NASA astronaut Mike Hopkins sucessfully transplanted a plant (pak choi) in the agency’s Vegetable Production System (Veggie) aboard the International Space Station for the first time on Jan. 14, 2021.",
@@ -15,7 +52,7 @@
       "Science 4U"
     ],
     "preview": "posts/2021-08-03-spacebiology5/PlantPillow.jpg",
-    "last_modified": "2021-03-08T15:12:56+01:00"
+    "last_modified": "2021-03-09T14:35:27+01:00"
   },
   {
     "path": "posts/2020-12-05-spacebiology4/",
