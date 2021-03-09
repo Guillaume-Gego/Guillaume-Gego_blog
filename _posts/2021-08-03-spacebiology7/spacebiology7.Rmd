@@ -5,7 +5,7 @@ description: |
 author:
   - name: Guillaume Gégo
     url: {}
-date: 12-05-2020
+date: 08-03-2021
 categories:
   - "Physiology"
   - "Astrobiology"
@@ -20,7 +20,7 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-# Mitochondrial Changes Key to Health Problems in Space
+# Microbes To Demonstrate Biomining Of Asteroid Material Aboard The Space Station
   
 Space isn't safe, that's just common sense. But what really happens to our body is somtimes still foggy, as physiologists keep scratching their heads on data collected over the space of over a decade. But one team of brilliant scientists might have found the origin of all those potentially harmful structural changes: the changes that the mitochondrion experiences during spaceflight. They analyzed data sample from around 59 astronauts, including some rodents such as a couple of mice and NASA's astronaut Scott Kelly who has a twin on earth. 
   
